@@ -1,7 +1,7 @@
 using UnityEngine;
 
-public class Bootstrapper : MonoBehaviour
-{
+public class ActionList : MonoBehaviour {
+
     void Start() {
         
     }
