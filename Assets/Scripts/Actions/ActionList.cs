@@ -1,16 +1,17 @@
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
 public class ActionList : MonoBehaviour {
+    
+    public List<Action> actionList;
 
-
-    void Start() {
-        
+    public void RunActionlist() {
+        StartCoroutine(ActuallyRun());
     }
-
-    void Update() {
-        
+    IEnumerator ActuallyRun() {
+        yield return new WaitForSeconds(0);
     }
 
     public void SetVisibility(bool visible, SpriteRenderer sprite) {
@@ -55,6 +56,10 @@ public class ActionList : MonoBehaviour {
         Application.Quit();
     }
 
+    public void ChangeHotspot(Interactable interactable, bool state) {
+        interactable.canInteract = state;
+    }
+
     /*
     Actions
     - Visibility x
@@ -76,6 +81,6 @@ public class ActionList : MonoBehaviour {
     - play music
     - check variable
     - set variable
-    - change hotspot
+    - change hotspot x
     */
 }

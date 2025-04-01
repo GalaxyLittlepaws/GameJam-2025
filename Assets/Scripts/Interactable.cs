@@ -19,6 +19,7 @@ public class Interactable : MonoBehaviour {
     void OnMouseEnter() {
         if (manager.interactionEnabled && methodMouseEnter != null && canInteract) {
             methodMouseEnter.Invoke();
+            
         }
             
     }
@@ -30,6 +31,7 @@ public class Interactable : MonoBehaviour {
     void OnMouseDown() {
         if (manager.interactionEnabled && methodMouseDown != null && canInteract) {
             methodMouseDown.Invoke();
+            Debug.Log("I did it!");
         }
             
     }
