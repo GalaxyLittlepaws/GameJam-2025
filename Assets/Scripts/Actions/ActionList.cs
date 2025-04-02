@@ -11,6 +11,9 @@ public class ActionList : MonoBehaviour {
         StartCoroutine(ActuallyRun());
     }
     IEnumerator ActuallyRun() {
+        for (int i = 0; i < actionList.Count; i++) {
+            
+        }
         yield return new WaitForSeconds(0);
     }
 
