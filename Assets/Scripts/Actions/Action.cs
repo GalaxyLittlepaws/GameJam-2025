@@ -2,13 +2,14 @@ using UnityEngine;
 
 [System.Serializable]
 public class Action {
-    int index = 0;
+    public int index = 0;
 
     //set visibility
     public bool visiState;
     public SpriteRenderer visiRenderer;
 
     //animate
+    public int animType;
     public Animator animAnimator;
     public string animTrigger;
     public int animInt;
