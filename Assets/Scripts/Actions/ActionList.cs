@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ActionList : MonoBehaviour {
     
-    public List<Action> actionList;
+    public List<Action> actionList = new List<Action>();
 
     public void RunActionlist() {
         StartCoroutine(ActuallyRun());
