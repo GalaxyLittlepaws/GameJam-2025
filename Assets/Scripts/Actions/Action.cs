@@ -20,7 +20,7 @@ public class Action {
     public Vector3 transNew;
     public GameObject transObject;
     public float transTime;
-
+    public bool waitForTransform;
     //set active
     public GameObject actObject;
     public bool actState;

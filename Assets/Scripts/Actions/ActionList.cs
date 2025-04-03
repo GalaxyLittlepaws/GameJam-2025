@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using UnityEditor;
 using UnityEngine;
 
 public class ActionList : MonoBehaviour {
@@ -12,7 +13,33 @@ public class ActionList : MonoBehaviour {
     }
     IEnumerator ActuallyRun() {
         for (int i = 0; i < actionList.Count; i++) {
-            
+            if (actionList[i].index == 0) {
+                yield return new WaitForSeconds(actionList[i].waitTime);
+            } else if (actionList[i].index == 1) {
+                SetVisibility(actionList[i].visiState, actionList[i].visiRenderer);
+            } else if (actionList[i].index == 2) {
+                Transform(actionList[i].transType, actionList[i].transObject, actionList[i].transNew, actionList[i].transTime);
+                if (actionList[i].waitForTransform) {
+                    yield return new WaitForSeconds(actionList[i].transTime);
+                }
+            } else if (actionList[i].index == 3) {
+                Active(actionList[i].actObject, actionList[i].actState);
+            } else if (actionList[i].index == 4) {
+                ChangeHotspot(actionList[i].hotInteract, actionList[i].hotState);
+            } else if (actionList[i].index == 5) {
+                InteractableState(actionList[i].intState);
+            } else if (actionList[i].index == 6) {
+                if (actionList[i].animType == 0) {
+                    Animate(actionList[i].animAnimator, actionList[i].animTrigger);
+                } else if (actionList[i].animType == 1) {
+                    Animate(actionList[i].animAnimator, actionList[i].animBool, actionList[i].animTrigger);
+                } else if (actionList[i].animType == 2) {
+                    Animate(actionList[i].animAnimator, actionList[i].animInt, actionList[i].animTrigger);
+                }
+            } else if (actionList[i].index == 7) {
+                Debug.Log("End Game");
+                EndGame();
+            }
         }
         yield return new WaitForSeconds(0);
     }
@@ -56,7 +83,11 @@ public class ActionList : MonoBehaviour {
     }
 
     public void EndGame() {
+        #if UNITY_EDITOR
+        EditorApplication.ExitPlaymode();
+        #elif UNITY_STANDALONE 
         Application.Quit();
+        #endif
     }
 
     public void ChangeHotspot(Interactable interactable, bool state) {
@@ -67,11 +98,11 @@ public class ActionList : MonoBehaviour {
     Actions
     - Visibility x
     - Animate x
-    - Fade
+    - Fade sprite
     - Send Message
     - transform x
     - set active x
-    - wait
+    - wait x
     - fade camera
     - alter interaction state x
     - change camera

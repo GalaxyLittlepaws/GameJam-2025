@@ -20,7 +20,7 @@ public class ActionListEditor : Editor {
             EditorGUILayout.Space(10);
             actionListElement.index = EditorGUILayout.Popup("Action Type:" ,actionListElement.index, actionNameList);
             if (actionListElement.index == 0) {
-
+                actionListElement.waitTime = EditorGUILayout.FloatField("Wait Time:", actionListElement.waitTime);
             } else if (actionListElement.index == 1) {
                 SetVisibility(actionListElement);
             } else if (actionListElement.index == 2) {
@@ -102,15 +102,23 @@ public class ActionListEditor : Editor {
             action.animBool = EditorGUILayout.Toggle("Value to set:", action.animBool);
         }
     }
-
+    string[] transformOptions = new string[] {"Translate", "Rotate", "Scale"};
     void Transform(Action action) {
-       
+        action.transType = EditorGUILayout.Popup("Transform Type:", action.transType, transformOptions);
+        action.transObject = (GameObject)EditorGUILayout.ObjectField("Transform Type:", action.transObject, typeof(GameObject), true);
+        action.transTime = EditorGUILayout.FloatField("Time to transform:", action.transTime);
+        action.waitForTransform = EditorGUILayout.Toggle("Wait for transform to complete?", action.waitForTransform);
+        action.transNew = EditorGUILayout.Vector3Field("New Transform:", action.transNew);
     }
 
     void Active(Action action) {
+        action.actObject = (GameObject)EditorGUILayout.ObjectField("Object to set:", action.actObject, typeof(GameObject), true);
+        action.actState = EditorGUILayout.Toggle("State to set:", action.actState);
     }
 
     void InteractableState(Action action) {
+        EditorGUILayout.LabelField("NOTE- This will affect GLOBAL INTERACTION, not a specific hotspot!");
+        action.intState = EditorGUILayout.Toggle("Interaction State:", action.intState);
     }
 
     void EndGame() {
@@ -118,5 +126,7 @@ public class ActionListEditor : Editor {
     }
 
     void ChangeHotspot(Action action) {
+        action.hotInteract = (Interactable)EditorGUILayout.ObjectField("Hotspot to set:", action.hotInteract, typeof(Interactable), true);
+        action.hotState = EditorGUILayout.Toggle("State to set:", action.hotState);
     }
 }
