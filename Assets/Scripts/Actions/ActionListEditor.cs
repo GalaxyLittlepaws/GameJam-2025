@@ -14,33 +14,33 @@ public class ActionListEditor : Editor {
             }
             EditorGUILayout.Space(10);
         }
-        for (int i = 0; i < baseElement.actionList.Count; i++) {
-            Action actionListElement = baseElement.actionList[i];
-            EditorGUILayout.LabelField("Action " + i);
-            EditorGUILayout.Space(10);
-            actionListElement.index = EditorGUILayout.Popup("Action Type:" ,actionListElement.index, actionNameList);
-            if (actionListElement.index == 0) {
-                actionListElement.waitTime = EditorGUILayout.FloatField("Wait Time:", actionListElement.waitTime);
-            } else if (actionListElement.index == 1) {
-                SetVisibility(actionListElement);
-            } else if (actionListElement.index == 2) {
-                Transform(actionListElement);
-            } else if (actionListElement.index == 3) {
-                Active(actionListElement);
-            } else if (actionListElement.index == 4) {
-                ChangeHotspot(actionListElement);
-            } else if (actionListElement.index == 5) {
-                InteractableState(actionListElement);
-            } else if (actionListElement.index == 6) {
-                Animate(actionListElement);
-            } else if (actionListElement.index == 7) {
-                EndGame();
-            }
-            EditorGUILayout.Space(10);
-            EndAction(i);
-            EditorGUILayout.Space(10);
-            
-        }
+        
+            for (int i = 0; i < baseElement.actionList.Count; i++) {
+                Action actionListElement = baseElement.actionList[i];
+                EditorGUILayout.LabelField("Action " + i);
+                EditorGUILayout.Space(10);
+                actionListElement.index = EditorGUILayout.Popup("Action Type:" ,actionListElement.index, actionNameList);
+                if (actionListElement.index == 0) {
+                    actionListElement.waitTime = EditorGUILayout.FloatField("Wait Time:", actionListElement.waitTime);
+                } else if (actionListElement.index == 1) {
+                    SetVisibility(actionListElement);
+                } else if (actionListElement.index == 2) {
+                    Transform(actionListElement);
+                } else if (actionListElement.index == 3) {
+                    Active(actionListElement);
+                } else if (actionListElement.index == 4) {
+                    ChangeHotspot(actionListElement);
+                } else if (actionListElement.index == 5) {
+                    InteractableState(actionListElement);
+                } else if (actionListElement.index == 6) {
+                    Animate(actionListElement);
+                } else if (actionListElement.index == 7) {
+                    EndGame();
+                }
+                EditorGUILayout.Space(10);
+                EndAction(i);
+                EditorGUILayout.Space(10);
+            }        
         if (GUILayout.Button("Add New Action")) {
             baseElement.actionList.Add(new Action());
         }
