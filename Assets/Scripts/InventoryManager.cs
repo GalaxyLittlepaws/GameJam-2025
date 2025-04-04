@@ -5,15 +5,7 @@ public class InventoryManager : MonoBehaviour {
 
     [SerializeField] List<InventoryObject> inventoryObjects = new List<InventoryObject>();
     [SerializeField] private int currentlySelected = -1;
-
-    void Start() {
-        
-    }
-
-    void Update() {
-        // Handle inventory updates if needed
-    }
-
+    
     public void AddItem(InventoryObject item) {
         inventoryObjects.Add(item);
     }
