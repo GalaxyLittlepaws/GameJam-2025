@@ -1,5 +1,7 @@
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [CustomEditor(typeof(ActionList))]
 public class ActionListEditor : Editor {
@@ -51,6 +53,7 @@ public class ActionListEditor : Editor {
         if (GUILayout.Button("Add New Action")) {
             baseElement.actionList.Add(new Action());
         }
+        EditorSceneManager.MarkAllScenesDirty();
 
     }
     void EndAction(int i) {
