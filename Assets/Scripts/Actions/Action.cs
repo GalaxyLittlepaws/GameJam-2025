@@ -38,4 +38,15 @@ public class Action {
     //comment
     public string comment;
 
+    //add inventory
+    public InventoryObject addInvObj;
+
+    //remove inventory
+    public InventoryObject remInvObj;
+
+    //check inventory
+    public InventoryObject checkInvObj;
+    public ActionList checkSkipTo;
+    public int checkSkipTrue;
+
 }

@@ -1,10 +1,13 @@
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [CustomEditor(typeof(ActionList))]
 public class ActionListEditor : Editor {
     ActionList baseElement;
-    string[] actionNameList = new string[] {"Wait", "Visibility", "Transform", "Set Active", "Set Hotspot", "Interactable State", "Animate", "End Game"};
+    string[] actionNameList = new string[] {"Wait", "Visibility", "Transform", "Set Active", "Set Hotspot", "Interactable State", "Animate", "End Game",
+    "Add Inventory Object", "Remove Inventory Object", "Check Current Inventory Object"};
     public override void OnInspectorGUI() {
         base.OnInspectorGUI();
         baseElement = (ActionList)target;
@@ -36,6 +39,12 @@ public class ActionListEditor : Editor {
                     Animate(actionListElement);
                 } else if (actionListElement.index == 7) {
                     EndGame();
+                } else if (actionListElement.index == 8) {
+                    AddInventoryObject(actionListElement);
+                } else if (actionListElement.index == 9) {
+                    RemoveInventoryObject(actionListElement);
+                } else if (actionListElement.index == 10) {
+                    CheckCurrentInventoryObject(actionListElement);
                 }
                 EditorGUILayout.Space(10);
                 EndAction(i);
@@ -44,6 +53,7 @@ public class ActionListEditor : Editor {
         if (GUILayout.Button("Add New Action")) {
             baseElement.actionList.Add(new Action());
         }
+        EditorSceneManager.MarkAllScenesDirty();
 
     }
     void EndAction(int i) {
@@ -128,5 +138,18 @@ public class ActionListEditor : Editor {
     void ChangeHotspot(Action action) {
         action.hotInteract = (Interactable)EditorGUILayout.ObjectField("Hotspot to set:", action.hotInteract, typeof(Interactable), true);
         action.hotState = EditorGUILayout.Toggle("State to set:", action.hotState);
+    }
+
+    void AddInventoryObject(Action action) {
+        action.addInvObj = (InventoryObject)EditorGUILayout.ObjectField("Object to add:", action.addInvObj, typeof(InventoryObject), false);
+    }
+    void RemoveInventoryObject(Action action) {
+        action.remInvObj = (InventoryObject)EditorGUILayout.ObjectField("Object to remove:", action.remInvObj, typeof(InventoryObject), false);
+    }
+    string[] invCheckTrue = new string[] {"Run Actionlist if True", "Run Actionlist if False"};
+    void CheckCurrentInventoryObject(Action action) {
+        action.checkInvObj = (InventoryObject)EditorGUILayout.ObjectField("Object to check:", action.checkInvObj, typeof(InventoryObject), false);
+        action.checkSkipTrue = EditorGUILayout.Popup(action.checkSkipTrue, invCheckTrue);
+        action.checkSkipTo = (ActionList)EditorGUILayout.ObjectField("Actionlist to run:", action.checkSkipTo, typeof(ActionList), true);
     }
 }

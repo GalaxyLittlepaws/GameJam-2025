@@ -4,8 +4,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public bool interactionEnabled = true;
-    void Start() {
-        
+    void Awake() {
+        DontDestroyOnLoad(this);
     }
 
     void Update() {

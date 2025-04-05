@@ -17,7 +17,7 @@ PlayerSettings:
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
-  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashScreen: 0
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
@@ -785,7 +785,7 @@ PlayerSettings:
   cloudProjectId: e8173a9c-a342-4fd7-98d1-c61436b82223
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Capricious Alien Tactics
+  projectName: Unitled Color Game
   organizationId: galaxylittlepaws
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

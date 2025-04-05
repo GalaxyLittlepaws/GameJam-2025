@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ActionList : MonoBehaviour {
     
-    public List<Action> actionList;
+    public List<Action> actionList = new List<Action>();
 
     public void RunActionlist() {
         StartCoroutine(ActuallyRun());
@@ -39,29 +39,37 @@ public class ActionList : MonoBehaviour {
             } else if (actionList[i].index == 7) {
                 Debug.Log("End Game");
                 EndGame();
+            } else if (actionList[i].index == 8) {
+                AddInventoryObject(actionList[i].addInvObj);
+            } else if (actionList[i].index == 9) {
+                RemoveInventoryObject(actionList[i].remInvObj);
+            } else if (actionList[i].index == 10) {
+                if (CheckCurrentInventory(actionList[i].checkInvObj, actionList[i].checkSkipTo, actionList[i].checkSkipTrue)) {
+                    yield break;
+                }
             }
         }
         yield return new WaitForSeconds(0);
     }
 
-    public void SetVisibility(bool visible, SpriteRenderer sprite) {
+    void SetVisibility(bool visible, SpriteRenderer sprite) {
         sprite.enabled = visible;
     }
 
-    public void Animate(Animator animator, string trigger) {
+    void Animate(Animator animator, string trigger) {
         // trigger
         animator.SetTrigger(trigger);
     }
-    public void Animate(Animator animator, int triggerInt, string trigger) {
+    void Animate(Animator animator, int triggerInt, string trigger) {
         // int
         animator.SetInteger(trigger, triggerInt);
     }
-    public void Animate(Animator animator, bool triggerBool, string trigger) {
+    void Animate(Animator animator, bool triggerBool, string trigger) {
         // bool
         animator.SetBool(trigger, triggerBool);;
     }
 
-    public void Transform(int type, GameObject transformObject, Vector3 newTransform, float time) {
+    void Transform(int type, GameObject transformObject, Vector3 newTransform, float time) {
         // 0 = translate
         // 1 = rotate
         // 2 = scale
@@ -74,15 +82,15 @@ public class ActionList : MonoBehaviour {
         }
     }
 
-    public void Active(GameObject gameObject, bool state) {
+    void Active(GameObject gameObject, bool state) {
         gameObject.SetActive(state);
     }
 
-    public void InteractableState(bool state) {
+    void InteractableState(bool state) {
         FindAnyObjectByType<GameManager>().interactionEnabled = state;
     }
 
-    public void EndGame() {
+    void EndGame() {
         #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
         #elif UNITY_STANDALONE 
@@ -90,10 +98,35 @@ public class ActionList : MonoBehaviour {
         #endif
     }
 
-    public void ChangeHotspot(Interactable interactable, bool state) {
+    void ChangeHotspot(Interactable interactable, bool state) {
         interactable.canInteract = state;
     }
 
+    void AddInventoryObject(InventoryObject inventoryObject) {
+        FindAnyObjectByType<InventoryManager>().AddItem(inventoryObject);
+    }
+
+    void RemoveInventoryObject(InventoryObject inventoryObject) {
+        FindAnyObjectByType<InventoryManager>().RemoveItem(inventoryObject);
+    }
+
+    bool CheckCurrentInventory(InventoryObject inventoryObject, ActionList actionListToSkipTo, int skipOnTrue) {
+        if (inventoryObject == FindAnyObjectByType<InventoryManager>().GetSelectedItem()) {
+            if (skipOnTrue == 0) {
+                actionListToSkipTo.RunActionlist();
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            if (skipOnTrue == 1) {
+                actionListToSkipTo.RunActionlist();
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
     /*
     Actions
     - Visibility x
@@ -109,8 +142,9 @@ public class ActionList : MonoBehaviour {
     - end game x
     - save
     - load
-    - add inventory
-    - remove inventory
+    - add inventory x
+    - remove inventory x
+    - check current object held x
     - play sound
     - play music
     - check variable

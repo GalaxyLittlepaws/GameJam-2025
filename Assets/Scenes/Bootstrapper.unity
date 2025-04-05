@@ -183,7 +183,7 @@ MonoBehaviour:
   speech: 5
   fullscreen: 1
   resolutionList: []
-  currentResolution: 9
+  currentResolution: 0
   startup: 0
 --- !u!1 &1013501697
 GameObject:
@@ -311,6 +311,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e02a745cbca14f5fa06081e6978830d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToGoTo: SplashScreens
+  setCustomScene: 1
+  customScene: TitleScreen
 --- !u!4 &2108030912
 Transform:
   m_ObjectHideFlags: 0
