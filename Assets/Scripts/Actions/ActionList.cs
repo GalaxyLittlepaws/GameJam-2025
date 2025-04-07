@@ -58,6 +58,8 @@ public class ActionList : MonoBehaviour {
             } else if (actionList[i].index == 12) {
                 FadeSprite(actionList[i].spriteFadeAmount, actionList[i].spriteFadeTime, actionList[i].spriteFade);
             }
+            if (actionList[i].comment != null || actionList[i].comment != "")
+                Debug.Log(actionList[i].comment);
         }
     }
 
