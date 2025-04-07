@@ -7,7 +7,7 @@ public class ParticlesToggle : MonoBehaviour {
     ParticleSystem particle;
 
     void Start() {
-        manager = FindObjectOfType<AccessibilityManager>();
+        manager = FindAnyObjectByType<AccessibilityManager>();
         particle = GetComponent<ParticleSystem>();
     }
 

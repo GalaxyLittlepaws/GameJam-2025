@@ -49,4 +49,13 @@ public class Action {
     public ActionList checkSkipTo;
     public int checkSkipTrue;
 
+    //fade camera
+    public float camFadeTime;
+    public float camFadeAmount;
+
+    //fade camera
+    public float spriteFadeTime;
+    public float spriteFadeAmount;
+    public SpriteRenderer spriteFade;
+
 }

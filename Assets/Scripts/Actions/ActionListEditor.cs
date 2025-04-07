@@ -1,16 +1,16 @@
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 [CustomEditor(typeof(ActionList))]
 public class ActionListEditor : Editor {
     ActionList baseElement;
     string[] actionNameList = new string[] {"Wait", "Visibility", "Transform", "Set Active", "Set Hotspot", "Interactable State", "Animate", "End Game",
-    "Add Inventory Object", "Remove Inventory Object", "Check Current Inventory Object"};
+    "Add Inventory Object", "Remove Inventory Object", "Check Current Inventory Object", "Fade Camera", "Fade Sprite"};
     public override void OnInspectorGUI() {
         base.OnInspectorGUI();
         baseElement = (ActionList)target;
+        baseElement.runOnStart = EditorGUILayout.Toggle("Run on start?", baseElement.runOnStart);
         if (Application.isPlaying) {
             if (GUILayout.Button("Run Actions")) {
                 baseElement.RunActionlist();
@@ -45,6 +45,10 @@ public class ActionListEditor : Editor {
                     RemoveInventoryObject(actionListElement);
                 } else if (actionListElement.index == 10) {
                     CheckCurrentInventoryObject(actionListElement);
+                } else if (actionListElement.index == 11) {
+                    FadeCamera(actionListElement);
+                } else if (actionListElement.index == 12) {
+                    FadeSprite(actionListElement);
                 }
                 EditorGUILayout.Space(10);
                 EndAction(i);
@@ -53,7 +57,8 @@ public class ActionListEditor : Editor {
         if (GUILayout.Button("Add New Action")) {
             baseElement.actionList.Add(new Action());
         }
-        EditorSceneManager.MarkAllScenesDirty();
+        if (!Application.isPlaying)
+            EditorSceneManager.MarkAllScenesDirty();
 
     }
     void EndAction(int i) {
@@ -151,5 +156,14 @@ public class ActionListEditor : Editor {
         action.checkInvObj = (InventoryObject)EditorGUILayout.ObjectField("Object to check:", action.checkInvObj, typeof(InventoryObject), false);
         action.checkSkipTrue = EditorGUILayout.Popup(action.checkSkipTrue, invCheckTrue);
         action.checkSkipTo = (ActionList)EditorGUILayout.ObjectField("Actionlist to run:", action.checkSkipTo, typeof(ActionList), true);
+    }
+    void FadeCamera(Action action) {
+        action.camFadeAmount = EditorGUILayout.Slider("Fade Amount:", action.camFadeAmount, 0, 1);
+        action.camFadeTime = EditorGUILayout.FloatField("Fade Time:", action.camFadeTime);
+    }
+    void FadeSprite(Action action) {
+        action.spriteFade = (SpriteRenderer)EditorGUILayout.ObjectField("Sprite to fade:", action.spriteFade, typeof(SpriteRenderer), true);
+        action.spriteFadeAmount = EditorGUILayout.Slider("Fade Amount:", action.spriteFadeAmount, 0, 1);
+        action.spriteFadeTime = EditorGUILayout.FloatField("Fade Time:", action.spriteFadeTime);
     }
 }

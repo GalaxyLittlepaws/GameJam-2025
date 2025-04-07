@@ -6,7 +6,13 @@ using UnityEngine;
 
 public class ActionList : MonoBehaviour {
     
-    public List<Action> actionList = new List<Action>();
+    [HideInInspector] public List<Action> actionList = new List<Action>();
+    [HideInInspector] public bool runOnStart = false;
+    void Start() {
+        if (runOnStart) {
+            RunActionlist();
+        }
+    }
 
     public void RunActionlist() {
         StartCoroutine(ActuallyRun());
@@ -47,9 +53,12 @@ public class ActionList : MonoBehaviour {
                 if (CheckCurrentInventory(actionList[i].checkInvObj, actionList[i].checkSkipTo, actionList[i].checkSkipTrue)) {
                     yield break;
                 }
+            } else if (actionList[i].index == 11) {
+                FadeCamera(actionList[i].camFadeAmount, actionList[i].camFadeTime);
+            } else if (actionList[i].index == 12) {
+                FadeSprite(actionList[i].spriteFadeAmount, actionList[i].spriteFadeTime, actionList[i].spriteFade);
             }
         }
-        yield return new WaitForSeconds(0);
     }
 
     void SetVisibility(bool visible, SpriteRenderer sprite) {
@@ -127,6 +136,13 @@ public class ActionList : MonoBehaviour {
             }
         }
     }
+    void FadeCamera(float fadeAmount, float fadeTime) {
+        FindAnyObjectByType<TopLevelUIManager>().Fade(fadeAmount, fadeTime);
+    }
+
+    void FadeSprite(float fadeAmount, float fadeTime, SpriteRenderer spriteRenderer) {
+        spriteRenderer.DOFade(fadeAmount, fadeTime);
+    }
     /*
     Actions
     - Visibility x
@@ -136,7 +152,7 @@ public class ActionList : MonoBehaviour {
     - transform x
     - set active x
     - wait x
-    - fade camera
+    - fade camera x
     - alter interaction state x
     - change camera
     - end game x
