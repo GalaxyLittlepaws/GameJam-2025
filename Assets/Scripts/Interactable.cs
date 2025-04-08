@@ -7,9 +7,15 @@ public class Interactable : MonoBehaviour {
 
     public bool canInteract = true;
     GameManager manager;
-    [SerializeField] UnityEvent methodMouseEnter;
-    [SerializeField] UnityEvent methodMouseExit;
+    [Tooltip("Triggers when the mouse clicks element")]
     [SerializeField] UnityEvent methodMouseDown;
+
+    [Tooltip("Triggers when the mouse hovers over element")]
+    [SerializeField] UnityEvent methodMouseEnter;
+
+    [Tooltip("Triggers when the mouse leaves element")]
+    [SerializeField] UnityEvent methodMouseExit;
+
 
     void Start() {
         GetComponent<SpriteRenderer>().enabled = false;

@@ -23,7 +23,7 @@ public class TextMeshSettings : MonoBehaviour {
             TeMPro = GetComponent<TextMeshPro>();
             defaultColor = TeMPro.color;
         }
-        manager = FindObjectOfType<AccessibilityManager>();
+        manager = FindAnyObjectByType<AccessibilityManager>();
     }
     void Update() {
         

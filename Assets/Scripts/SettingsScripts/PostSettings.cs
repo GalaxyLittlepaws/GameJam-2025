@@ -18,7 +18,7 @@ public class PostSettings : MonoBehaviour {
     AccessibilityManager manager;
 
     void Start() {
-        manager = FindObjectOfType<AccessibilityManager>();
+        manager = FindAnyObjectByType<AccessibilityManager>();
     }
 
     void Update() {
