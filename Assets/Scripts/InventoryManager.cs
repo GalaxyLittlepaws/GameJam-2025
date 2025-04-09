@@ -40,7 +40,7 @@ public class InventoryManager : MonoBehaviour {
                             inventoryObjects.RemoveAt(item);
                             inventoryObjects.RemoveAt(currentlySelected-1);
                         }
-                        inventoryObjects.Add(newObject);
+                        AddItem(newObject);
                         runIf = false;
                     }
                     i++;

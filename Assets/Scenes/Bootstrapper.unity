@@ -1684,7 +1684,6 @@ MonoBehaviour:
   inventoryObjects:
   - {fileID: 11400000, guid: 1b813a4d3ca22f5ab9dfb511b21aa28e, type: 2}
   - {fileID: 11400000, guid: 43821abbbd25e4b8e8e11059a7ca7f6b, type: 2}
-  - {fileID: 11400000, guid: fc200d1a44c9946b580fe2371e5f0698, type: 2}
   currentlySelected: -1
   invUIElements:
   - {fileID: 492670953}
