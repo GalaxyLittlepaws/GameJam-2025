@@ -19,9 +19,11 @@ public class Interactable : MonoBehaviour {
     }
     void OnMouseDown() {
         if (whenInvHeld && FindAnyObjectByType<InventoryManager>().GetSelectedItem() != objcetToAccpet) {
+            FindAnyObjectByType<InventoryManager>().Deselct();
             return;
         }
         if (manager.interactionEnabled && methodMouseDown != null && canInteract) {
+            FindAnyObjectByType<InventoryManager>().Deselct();
             methodMouseDown.Invoke();
         }
             

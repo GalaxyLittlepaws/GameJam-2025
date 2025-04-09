@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.InputSystem;
+using System.Collections;
 public class InventoryManager : MonoBehaviour {
 
     [SerializeField] List<InventoryObject> inventoryObjects = new List<InventoryObject>();
@@ -12,7 +13,7 @@ public class InventoryManager : MonoBehaviour {
     }
     void Update() {
         for (int i = 0; i < invUIElements.Count; i++) {
-            if (i < inventoryObjects.Count) {
+            if (i < inventoryObjects.Count && inventoryObjects.Count != 0) {
                 invUIElements[i].enabled = true;
                 invUIElements[i].sprite = inventoryObjects[i].icon;
             } else {
@@ -20,10 +21,36 @@ public class InventoryManager : MonoBehaviour {
                 invUIElements[i].enabled = false;
             }
         }
+        if (Input.GetMouseButtonDown(1)) {
+            Deselct();
+        }
     }
     public void SelectItem(int item) {
-        currentlySelected = item;
-        Cursor.SetCursor(inventoryObjects[item].cursor, new Vector2(0,0), CursorMode.Auto);
+        if (item < inventoryObjects.Count) {
+            if (currentlySelected != -1) {
+                int i = 0;
+                bool runIf = true;
+                foreach(InventoryObject e in inventoryObjects[currentlySelected].canCombineWith) {
+                    if (e == inventoryObjects[item] && runIf) {
+                        InventoryObject newObject = inventoryObjects[currentlySelected].objectWhenCombined[i];
+                        if (currentlySelected < item) {
+                            inventoryObjects.RemoveAt(currentlySelected);
+                            inventoryObjects.RemoveAt(item-1);
+                        } else if (currentlySelected > item) {
+                            inventoryObjects.RemoveAt(item);
+                            inventoryObjects.RemoveAt(currentlySelected-1);
+                        }
+                        inventoryObjects.Add(newObject);
+                        runIf = false;
+                    }
+                    i++;
+                }
+                Deselct();
+            }
+            currentlySelected = item;
+            Cursor.SetCursor(inventoryObjects[item].cursor, new Vector2(0,0), CursorMode.Auto);
+        }
+        
     }
     public void Deselct() {
         currentlySelected = -1;

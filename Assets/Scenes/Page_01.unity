@@ -461,18 +461,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385893856}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf212b707267f4951a40391c95575f96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 1
-  methodMouseEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  methodMouseExit:
-    m_PersistentCalls:
-      m_Calls: []
+  whenInvHeld: 0
+  objcetToAccpet: {fileID: 0}
   methodMouseDown:
     m_PersistentCalls:
       m_Calls: []
