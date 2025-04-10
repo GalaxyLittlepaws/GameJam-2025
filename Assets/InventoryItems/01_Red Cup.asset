@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: 01_Red Cup
   m_EditorClassIdentifier: 
   objectName: Red Cup
-  icon: {fileID: 0}
+  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  cursor: {fileID: 10900, guid: 0000000000000000f000000000000000, type: 0}
+  canCombineWith: []
+  objectWhenCombined: []

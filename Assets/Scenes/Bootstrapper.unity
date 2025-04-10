@@ -1681,9 +1681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e1f9c2f799d4b6eb37f834112b1c77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryObjects:
-  - {fileID: 11400000, guid: 1b813a4d3ca22f5ab9dfb511b21aa28e, type: 2}
-  - {fileID: 11400000, guid: 43821abbbd25e4b8e8e11059a7ca7f6b, type: 2}
+  inventoryObjects: []
   currentlySelected: -1
   invUIElements:
   - {fileID: 492670953}
