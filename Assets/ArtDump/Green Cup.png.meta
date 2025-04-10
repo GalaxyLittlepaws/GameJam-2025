@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2904678a4c2a04e6c82022b79cc3402f
+guid: e4c54a62061f30f418752f4a436553a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -675864941198844261
-    second: PuzzlerBackround_0
+      213: 3717446339430807643
+    second: Green Cup_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PuzzlerBackround_0
+      name: Green Cup_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2048
-        height: 2048
+        width: 863
+        height: 863
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9ed3b7ba68de96f0800000000000000
-      internalID: -675864941198844261
+      spriteID: b587955ffb5079330800000000000000
+      internalID: 3717446339430807643
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PuzzlerBackround_0: -675864941198844261
+      Green Cup_0: 3717446339430807643
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
