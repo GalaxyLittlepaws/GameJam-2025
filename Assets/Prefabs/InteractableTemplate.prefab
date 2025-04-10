@@ -93,7 +93,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 1
-  scriptTrigger:
+  whenInvHeld: 0
+  objcetToAccpet: {fileID: 0}
+  methodMouseDown:
     m_PersistentCalls:
       m_Calls: []
 --- !u!212 &1250507738114509165
@@ -141,7 +143,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0.87076914, b: 0, a: 0.12941177}
+  m_Color: {r: 1, g: 0.87076914, b: 0, a: 0.6862745}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
