@@ -1359,6 +1359,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionList:
+  - index: 4
+    visiState: 0
+    visiRenderer: {fileID: 0}
+    animType: 0
+    animAnimator: {fileID: 0}
+    animTrigger: 
+    animInt: 0
+    animBool: 0
+    transType: 0
+    transNew: {x: 0, y: 0, z: 0}
+    transObject: {fileID: 0}
+    transTime: 0
+    waitForTransform: 0
+    actObject: {fileID: 0}
+    actState: 0
+    intState: 0
+    hotInteract: {fileID: 1364268555}
+    hotState: 0
+    waitTime: 0
+    comment: 
+    addInvObj: {fileID: 0}
+    remInvObj: {fileID: 0}
+    checkInvObj: {fileID: 0}
+    checkSkipTo: {fileID: 0}
+    checkSkipTrue: 0
+    camFadeTime: 0
+    camFadeAmount: 0
+    spriteFadeTime: 0
+    spriteFadeAmount: 0
+    spriteFade: {fileID: 0}
   - index: 8
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -1420,6 +1450,17 @@ MonoBehaviour:
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
   runOnStart: 0
+--- !u!114 &1364268555 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7791556028970439058, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
+  m_PrefabInstance: {fileID: 532539744}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621330240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf212b707267f4951a40391c95575f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1529055875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6189915091495393036, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
@@ -1443,6 +1484,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionList:
+  - index: 4
+    visiState: 0
+    visiRenderer: {fileID: 0}
+    animType: 0
+    animAnimator: {fileID: 0}
+    animTrigger: 
+    animInt: 0
+    animBool: 0
+    transType: 0
+    transNew: {x: 0, y: 0, z: 0}
+    transObject: {fileID: 0}
+    transTime: 0
+    waitForTransform: 0
+    actObject: {fileID: 0}
+    actState: 0
+    intState: 0
+    hotInteract: {fileID: 1574498714}
+    hotState: 0
+    waitTime: 0
+    comment: 
+    addInvObj: {fileID: 0}
+    remInvObj: {fileID: 0}
+    checkInvObj: {fileID: 0}
+    checkSkipTo: {fileID: 0}
+    checkSkipTrue: 0
+    camFadeTime: 0
+    camFadeAmount: 0
+    spriteFadeTime: 0
+    spriteFadeAmount: 0
+    spriteFade: {fileID: 0}
   - index: 8
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -1504,6 +1575,17 @@ MonoBehaviour:
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
   runOnStart: 0
+--- !u!114 &1574498714 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7791556028970439058, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
+  m_PrefabInstance: {fileID: 147464442}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343982245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf212b707267f4951a40391c95575f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1677423123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,36 +1696,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionList:
-  - index: 1
-    visiState: 0
-    visiRenderer: {fileID: 0}
-    animType: 0
-    animAnimator: {fileID: 0}
-    animTrigger: 
-    animInt: 0
-    animBool: 0
-    transType: 0
-    transNew: {x: 0, y: 0, z: 0}
-    transObject: {fileID: 0}
-    transTime: 0
-    waitForTransform: 0
-    actObject: {fileID: 0}
-    actState: 0
-    intState: 0
-    hotInteract: {fileID: 0}
-    hotState: 0
-    waitTime: 0
-    comment: 
-    addInvObj: {fileID: 0}
-    remInvObj: {fileID: 0}
-    checkInvObj: {fileID: 0}
-    checkSkipTo: {fileID: 0}
-    checkSkipTrue: 0
-    camFadeTime: 0
-    camFadeAmount: 0
-    spriteFadeTime: 0
-    spriteFadeAmount: 0
-    spriteFade: {fileID: 0}
   - index: 4
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -1660,7 +1712,7 @@ MonoBehaviour:
     actObject: {fileID: 0}
     actState: 0
     intState: 0
-    hotInteract: {fileID: 0}
+    hotInteract: {fileID: 1883081727}
     hotState: 0
     waitTime: 0
     comment: 
@@ -1674,9 +1726,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
-  - index: 0
+  - index: 1
     visiState: 0
-    visiRenderer: {fileID: 0}
+    visiRenderer: {fileID: 1303856983}
     animType: 0
     animAnimator: {fileID: 0}
     animTrigger: 
@@ -1704,7 +1756,48 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+  - index: 8
+    visiState: 0
+    visiRenderer: {fileID: 0}
+    animType: 0
+    animAnimator: {fileID: 0}
+    animTrigger: 
+    animInt: 0
+    animBool: 0
+    transType: 0
+    transNew: {x: 0, y: 0, z: 0}
+    transObject: {fileID: 0}
+    transTime: 0
+    waitForTransform: 0
+    actObject: {fileID: 0}
+    actState: 0
+    intState: 0
+    hotInteract: {fileID: 0}
+    hotState: 0
+    waitTime: 0
+    comment: 
+    addInvObj: {fileID: 11400000, guid: 1f5dd564696a956ec98ccad9d023d980, type: 2}
+    remInvObj: {fileID: 0}
+    checkInvObj: {fileID: 0}
+    checkSkipTo: {fileID: 0}
+    checkSkipTrue: 0
+    camFadeTime: 0
+    camFadeAmount: 0
+    spriteFadeTime: 0
+    spriteFadeAmount: 0
+    spriteFade: {fileID: 0}
   runOnStart: 0
+--- !u!114 &1883081727 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7791556028970439058, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
+  m_PrefabInstance: {fileID: 535821638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883081724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf212b707267f4951a40391c95575f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1931111108 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6189915091495393036, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
