@@ -58,7 +58,7 @@ public class ActionList : MonoBehaviour {
             } else if (actionList[i].index == 12) {
                 FadeSprite(actionList[i].spriteFadeAmount, actionList[i].spriteFadeTime, actionList[i].spriteFade);
             }
-            if (actionList[i].comment != null || actionList[i].comment != "")
+            if (actionList[i].comment != null && actionList[i].comment != "")
                 Debug.Log(actionList[i].comment);
         }
     }
@@ -147,26 +147,13 @@ public class ActionList : MonoBehaviour {
     }
     /*
     Actions
-    - Visibility x
-    - Animate x
-    - Fade sprite
     - Send Message
-    - transform x
-    - set active x
-    - wait x
-    - fade camera x
-    - alter interaction state x
     - change camera
-    - end game x
     - save
     - load
-    - add inventory x
-    - remove inventory x
-    - check current object held x
     - play sound
     - play music
     - check variable
     - set variable
-    - change hotspot x
     */
 }

@@ -2118,7 +2118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToGoTo: SplashScreens
   setCustomScene: 1
-  customScene: Page_01
+  customScene: TitleScreen
 --- !u!4 &2108030912
 Transform:
   m_ObjectHideFlags: 0
