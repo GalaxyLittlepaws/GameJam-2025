@@ -135,7 +135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &166331016
 Transform:
   m_ObjectHideFlags: 0
@@ -163,12 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9750e74b612a42e1966d0d4960a9726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particles: 0
-  contrast: 0
-  bloom: 1
-  chromAbb: 1
-  grain: 1
-  vignette: 1
   fontList: []
   font: 0
   colourList: []
@@ -180,10 +174,7 @@ MonoBehaviour:
   customColour5: blank
   SFX: 5
   music: 5
-  speech: 5
   fullscreen: 1
-  resolutionList: []
-  currentResolution: 0
   startup: 0
 --- !u!1 &367779473
 GameObject:
@@ -605,6 +596,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492670951}
   m_CullTransparentMesh: 1
+--- !u!1 &530808661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 530808663}
+  - component: {fileID: 530808662}
+  m_Layer: 0
+  m_Name: DataPersistenceObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &530808662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530808661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ffc991cf6f5040ecb1654917e208663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: jamegam.save
+--- !u!4 &530808663
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530808661}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &808993668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,58 +1726,6 @@ MonoBehaviour:
   - {fileID: 1039212590}
   - {fileID: 1977836340}
   - {fileID: 1551373138}
---- !u!1 &1768972215
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1768972216}
-  - component: {fileID: 1768972217}
-  m_Layer: 0
-  m_Name: PostManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1768972216
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768972215}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1768972217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768972215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61999b9037b9c4e4dbd9222ee5c5bea7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bloom: {fileID: 0}
-  chromAb: {fileID: 0}
-  filmGrain: {fileID: 0}
-  vignette: {fileID: 0}
-  highContrast: {fileID: 0}
-  lowContrast: {fileID: 0}
-  highVolumes: []
-  lowVolumes: []
 --- !u!1 &1769695708
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,9 +2123,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1013501698}
-  - {fileID: 1768972216}
   - {fileID: 166331016}
-  - {fileID: 2108030912}
   - {fileID: 973087054}
   - {fileID: 1863378192}
   - {fileID: 1609875386}
+  - {fileID: 2108030912}
+  - {fileID: 530808663}

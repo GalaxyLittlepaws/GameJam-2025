@@ -6,13 +6,6 @@ public class AccessibilityManager : MonoBehaviour, IDataPersitence {
 
     public void SaveData(GameData data) {
 
-        data.particles = this.particles;
-        data.contrast = this.contrast;
-        data.bloom = this.bloom;
-        data.chromAbb = this.chromAbb;
-        data.grain = this.grain;
-        data.vignette = this.vignette;
-
         data.font = this.font;
         data.currentColor = this.currentColour;
         data.customColour1 = this.customColour1;
@@ -21,22 +14,14 @@ public class AccessibilityManager : MonoBehaviour, IDataPersitence {
         data.customColour4 = this.customColour4;
         data.customColour5 = this.customColour5;
         data.SFXVolume = this.SFX;
-        data.SpeechVolume = this.speech;
         data.MusicVolume = this.music;
         data.fullscreen = this.fullscreen;
-        data.currentResolution = this.currentResolution;
         data.startup = this.startup;
 
     }
 
     public void LoadData(GameData data) {
 
-        this.particles = data.particles;
-        this.contrast = data.contrast;
-        this.bloom = data.bloom;
-        this.chromAbb = data.chromAbb;
-        this.grain = data.grain;
-        this.vignette = data.vignette;
         this.font = data.font;
         this.currentColour = data.currentColor;
         this.customColour1 = data.customColour1;
@@ -45,27 +30,11 @@ public class AccessibilityManager : MonoBehaviour, IDataPersitence {
         this.customColour4 = data.customColour4;
         this.customColour5 = data.customColour5;
         this.SFX = data.SFXVolume;
-        this.speech = data.SpeechVolume;
         this.music = data.MusicVolume;
         this.fullscreen = data.fullscreen;
-        this.currentResolution = data.currentResolution;
         this.startup = data.startup;
 
     }
-
-    [Header("Visual Settings")]
-    /*
-    Particles
-        2 = off
-        1 = Reduced
-        0 = Default
-    */
-    [SerializeField] public int particles = 0;
-    [SerializeField] public int contrast = 0;
-    [SerializeField] public bool bloom = true;
-    [SerializeField] public bool chromAbb = true;
-    [SerializeField] public bool grain = true;
-    [SerializeField] public bool vignette = true;
 
     [Header("Text Settings")]
 
@@ -98,21 +67,21 @@ public class AccessibilityManager : MonoBehaviour, IDataPersitence {
     [Header("Sounds Settings")]
     [SerializeField] public float SFX = 5;
     [SerializeField] public float music = 5;
-    [SerializeField] public float speech = 5;
-
-    [Header("Resolution Settings")]
-    [SerializeField] public bool fullscreen = true;
-    [SerializeField] public List<Vector2> resolutionList;
-    [SerializeField] public int currentResolution = 9;
 
     [Header("Game Settings")]
+    [SerializeField] public bool fullscreen = true;
+
     [SerializeField] public bool startup = false;
 
     public TMP_FontAsset SetFont() {
         return fontList[font];
     }
-    DataPersistenceManager saveManager;
+    DataPersistenceManager saveManager; 
+    void Awake() {
+        DontDestroyOnLoad(this);
+    }
     void Start() {
+        
         #if !PLATFORM_WEBGL && !UNITY_WEBGL
         saveManager = FindAnyObjectByType<DataPersistenceManager>();
         saveManager.LoadGame();
@@ -122,8 +91,6 @@ public class AccessibilityManager : MonoBehaviour, IDataPersitence {
         TurnOnFullscreen();
         else
         TurnOffFullscreen();
-
-        SetResolution();
         #endif
     }
 
@@ -134,10 +101,6 @@ public class AccessibilityManager : MonoBehaviour, IDataPersitence {
         #endif
 
     }
-
-    public void SetResolution() {
-        Screen.SetResolution(Mathf.RoundToInt(resolutionList[currentResolution].x), Mathf.RoundToInt(resolutionList[currentResolution].y), fullscreen);
-    }  
     public void TurnOnFullscreen() {   
         Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
         fullscreen = true;
