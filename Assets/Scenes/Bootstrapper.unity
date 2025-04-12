@@ -163,9 +163,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9750e74b612a42e1966d0d4960a9726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fontList: []
+  fontList:
+  - {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 11400000, guid: 1a65a7acb90494ff8bb036fe6e04d903, type: 2}
+  - {fileID: 11400000, guid: dc7d5f13f88b2432a8cd047570a8e86c, type: 2}
+  - {fileID: 11400000, guid: de4caeabcb15b42daa009e307a7a917e, type: 2}
   font: 0
-  colourList: []
+  colourList:
+  - {r: 0.796159, g: 1, b: 0.740566, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
   currentColour: 0
   customColour1: blank
   customColour2: blank
@@ -1254,7 +1260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 74.64514, y: -0.000061035156}
+  m_AnchoredPosition: {x: 74.64526, y: 0}
   m_SizeDelta: {x: 149.2901, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1302005539
