@@ -1361,6 +1361,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   runOnStart: 0
 --- !u!1 &254939077
 GameObject:
@@ -1374,6 +1377,7 @@ GameObject:
   - component: {fileID: 254939081}
   - component: {fileID: 254939080}
   - component: {fileID: 254939079}
+  - component: {fileID: 254939082}
   m_Layer: 5
   m_Name: New Game
   m_TagString: Untagged
@@ -1444,7 +1448,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 254939080}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 254939082}
+        m_TargetAssemblyTypeName: ActionList, Assembly-CSharp
+        m_MethodName: RunActionlist
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &254939080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1483,6 +1499,119 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254939077}
   m_CullTransparentMesh: 1
+--- !u!114 &254939082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254939077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4838e8093439545f6bc1e468c395c556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionList:
+  - index: 11
+    visiState: 0
+    visiRenderer: {fileID: 0}
+    animType: 0
+    animAnimator: {fileID: 0}
+    animTrigger: 
+    animInt: 0
+    animBool: 0
+    transType: 0
+    transNew: {x: 0, y: 0, z: 0}
+    transObject: {fileID: 0}
+    transTime: 0
+    waitForTransform: 0
+    actObject: {fileID: 0}
+    actState: 0
+    intState: 0
+    hotInteract: {fileID: 0}
+    hotState: 0
+    waitTime: 0
+    comment: 
+    addInvObj: {fileID: 0}
+    remInvObj: {fileID: 0}
+    checkInvObj: {fileID: 0}
+    checkSkipTo: {fileID: 0}
+    checkSkipTrue: 0
+    camFadeTime: 1
+    camFadeAmount: 1
+    spriteFadeTime: 0
+    spriteFadeAmount: 0
+    spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
+  - index: 0
+    visiState: 0
+    visiRenderer: {fileID: 0}
+    animType: 0
+    animAnimator: {fileID: 0}
+    animTrigger: 
+    animInt: 0
+    animBool: 0
+    transType: 0
+    transNew: {x: 0, y: 0, z: 0}
+    transObject: {fileID: 0}
+    transTime: 0
+    waitForTransform: 0
+    actObject: {fileID: 0}
+    actState: 0
+    intState: 0
+    hotInteract: {fileID: 0}
+    hotState: 0
+    waitTime: 1
+    comment: 
+    addInvObj: {fileID: 0}
+    remInvObj: {fileID: 0}
+    checkInvObj: {fileID: 0}
+    checkSkipTo: {fileID: 0}
+    checkSkipTrue: 0
+    camFadeTime: 0
+    camFadeAmount: 0
+    spriteFadeTime: 0
+    spriteFadeAmount: 0
+    spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
+  - index: 13
+    visiState: 0
+    visiRenderer: {fileID: 0}
+    animType: 0
+    animAnimator: {fileID: 0}
+    animTrigger: 
+    animInt: 0
+    animBool: 0
+    transType: 0
+    transNew: {x: 0, y: 0, z: 0}
+    transObject: {fileID: 0}
+    transTime: 0
+    waitForTransform: 0
+    actObject: {fileID: 0}
+    actState: 0
+    intState: 0
+    hotInteract: {fileID: 0}
+    hotState: 0
+    waitTime: 0
+    comment: 
+    addInvObj: {fileID: 0}
+    remInvObj: {fileID: 0}
+    checkInvObj: {fileID: 0}
+    checkSkipTo: {fileID: 0}
+    checkSkipTrue: 0
+    camFadeTime: 0
+    camFadeAmount: 0
+    spriteFadeTime: 0
+    spriteFadeAmount: 0
+    spriteFade: {fileID: 0}
+    useID: 1
+    sceneID: 0
+    sceneName: Page_01
+  runOnStart: 0
 --- !u!1 &259985709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,6 +1911,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 11
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -1812,6 +1944,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   runOnStart: 1
 --- !u!1 &280363198
 GameObject:
@@ -2062,6 +2197,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 0
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -2092,6 +2230,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 3
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -2122,6 +2263,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 3
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -2152,6 +2296,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 11
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -2182,6 +2329,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   runOnStart: 0
 --- !u!1 &310937827
 GameObject:
@@ -2258,6 +2408,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 0
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -2288,6 +2441,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 3
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -2318,6 +2474,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 3
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -2348,6 +2507,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 11
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -2378,6 +2540,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   runOnStart: 0
 --- !u!1 &328675251
 GameObject:
@@ -3171,6 +3336,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   runOnStart: 0
 --- !u!114 &551611666
 MonoBehaviour:
@@ -3566,6 +3734,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 0
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -3596,6 +3767,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 3
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -3626,6 +3800,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 3
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -3656,6 +3833,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 11
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -3686,6 +3866,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   runOnStart: 0
 --- !u!1 &646821689
 GameObject:
@@ -4195,6 +4378,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   runOnStart: 0
 --- !u!114 &703026760
 MonoBehaviour:
@@ -4448,6 +4634,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   runOnStart: 0
 --- !u!114 &862605450
 MonoBehaviour:
@@ -4992,6 +5181,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 0
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -5022,6 +5214,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 3
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -5052,6 +5247,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 3
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -5082,6 +5280,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 11
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -5112,6 +5313,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   runOnStart: 0
 --- !u!1 &1349933688
 GameObject:
@@ -6554,6 +6758,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 0
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -6584,6 +6791,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 3
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -6614,6 +6824,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 3
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -6644,6 +6857,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 11
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -6674,6 +6890,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   runOnStart: 0
 --- !u!1 &1705035319
 GameObject:
@@ -7107,6 +7326,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 0
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -7137,6 +7359,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 3
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -7167,6 +7392,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 3
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -7197,6 +7425,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   - index: 11
     visiState: 0
     visiRenderer: {fileID: 0}
@@ -7227,6 +7458,9 @@ MonoBehaviour:
     spriteFadeTime: 0
     spriteFadeAmount: 0
     spriteFade: {fileID: 0}
+    useID: 0
+    sceneID: 0
+    sceneName: 
   runOnStart: 0
 --- !u!1 &1816194308
 GameObject:
@@ -7286,7 +7520,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Game
+  m_text: Start Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ActionList : MonoBehaviour {
     
@@ -57,6 +58,8 @@ public class ActionList : MonoBehaviour {
                 FadeCamera(actionList[i].camFadeAmount, actionList[i].camFadeTime);
             } else if (actionList[i].index == 12) {
                 FadeSprite(actionList[i].spriteFadeAmount, actionList[i].spriteFadeTime, actionList[i].spriteFade);
+            } else if (actionList[i].index == 13) {
+                ChangeScene(actionList[i].useID, actionList[i].sceneID, actionList[i].sceneName);
             }
             if (actionList[i].comment != null && actionList[i].comment != "")
                 Debug.Log(actionList[i].comment);
@@ -144,6 +147,14 @@ public class ActionList : MonoBehaviour {
 
     void FadeSprite(float fadeAmount, float fadeTime, SpriteRenderer spriteRenderer) {
         spriteRenderer.DOFade(fadeAmount, fadeTime);
+    }
+
+    void ChangeScene(int useID, int sceneID, string sceneName) {
+        if (useID == 0) {
+            SceneManager.LoadScene(sceneID);
+        } else {
+            SceneManager.LoadScene(sceneName);
+        }
     }
     /*
     Actions

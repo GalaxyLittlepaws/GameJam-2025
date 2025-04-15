@@ -48,13 +48,14 @@ public class InventoryManager : MonoBehaviour {
                 Deselct();
             }
             currentlySelected = item;
-            Cursor.SetCursor(inventoryObjects[item].cursor, new Vector2(0,0), CursorMode.Auto);
+            FindAnyObjectByType<GameManager>().currentCursor = inventoryObjects[item].cursor;
         }
         
     }
     public void Deselct() {
         currentlySelected = -1;
-        Cursor.SetCursor(FindAnyObjectByType<GameManager>().cursor, new Vector2(0,0), CursorMode.Auto);
+        GameManager gameManager = FindAnyObjectByType<GameManager>();
+        gameManager.currentCursor = gameManager.cursor;
     }
     public void AddItem(InventoryObject item) {
         inventoryObjects.Add(item);

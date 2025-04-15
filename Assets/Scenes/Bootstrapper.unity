@@ -1068,7 +1068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionEnabled: 1
-  cursor: {fileID: 0}
+  cursor: {fileID: 2800000, guid: 544937e6f2925904eb80febe85d1bde7, type: 3}
+  currentCursor: {fileID: 2800000, guid: 544937e6f2925904eb80febe85d1bde7, type: 3}
 --- !u!1 &1039212588
 GameObject:
   m_ObjectHideFlags: 0

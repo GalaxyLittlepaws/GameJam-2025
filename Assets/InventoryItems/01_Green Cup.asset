@@ -13,4 +13,21 @@ MonoBehaviour:
   m_Name: 01_Green Cup
   m_EditorClassIdentifier: 
   objectName: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 10a9edc75b5074f90a764558927aeeda, type: 3}
+  cursor: {fileID: 2800000, guid: 18cae090d8ced4a9b940fab338d70264, type: 3}
+  canCombineWith:
+  - {fileID: 11400000, guid: 0f912d5f7082bc1148cf1b180a3abdc1, type: 2}
+  - {fileID: 11400000, guid: c72a212086e9140578fa65de1099d11f, type: 2}
+  - {fileID: 11400000, guid: 739121b4888274c3888993d0be41a4b3, type: 2}
+  - {fileID: 11400000, guid: 2a6314003994d496a82ec7c59deb4957, type: 2}
+  - {fileID: 11400000, guid: edfedd33f328bddcdb709671a0d8dec1, type: 2}
+  - {fileID: 11400000, guid: 8120a453ad3934780bb3a0f0d08e4be1, type: 2}
+  - {fileID: 11400000, guid: 9bc3d35b18d7fab86a3e2e5ff92077f0, type: 2}
+  objectWhenCombined:
+  - {fileID: 11400000, guid: 6a7f1c7781ed74876bea386d3f2e304d, type: 2}
+  - {fileID: 11400000, guid: 337b8a00717f3428db8fdd9011b4a6d1, type: 2}
+  - {fileID: 11400000, guid: 11adc9c07a8474c4e949257be5f0b01e, type: 2}
+  - {fileID: 11400000, guid: f2d88231e50c2193aa33410dc886248b, type: 2}
+  - {fileID: 11400000, guid: c776039e97f8446daa8edb409723ad31, type: 2}
+  - {fileID: 11400000, guid: d2086fe1aba3f4a068e035d254364017, type: 2}
+  - {fileID: 11400000, guid: 5e0827d3fc0d7462e92138f7880858e6, type: 2}
