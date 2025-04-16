@@ -58,4 +58,9 @@ public class Action {
     public float spriteFadeAmount;
     public SpriteRenderer spriteFade;
 
+    //change scene
+    public int useID;
+    public int sceneID;
+    public string sceneName;
+
 }

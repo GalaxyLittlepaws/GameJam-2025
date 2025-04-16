@@ -6,7 +6,7 @@ using UnityEngine;
 public class ActionListEditor : Editor {
     ActionList baseElement;
     string[] actionNameList = new string[] {"Wait", "Visibility", "Transform", "Set Active", "Set Hotspot", "Interactable State", "Animate", "End Game",
-    "Add Inventory Object", "Remove Inventory Object", "Check Current Inventory Object", "Fade Camera", "Fade Sprite"};
+    "Add Inventory Object", "Remove Inventory Object", "Check Current Inventory Object", "Fade Camera", "Fade Sprite", "Change Scene"};
     public override void OnInspectorGUI() {
         base.OnInspectorGUI();
         baseElement = (ActionList)target;
@@ -49,6 +49,8 @@ public class ActionListEditor : Editor {
                     FadeCamera(actionListElement);
                 } else if (actionListElement.index == 12) {
                     FadeSprite(actionListElement);
+                } else if (actionListElement.index == 13) {
+                    ChangeScene(actionListElement);
                 }
                 EditorGUILayout.Space(10);
                 EndAction(i);
@@ -165,5 +167,13 @@ public class ActionListEditor : Editor {
         action.spriteFade = (SpriteRenderer)EditorGUILayout.ObjectField("Sprite to fade:", action.spriteFade, typeof(SpriteRenderer), true);
         action.spriteFadeAmount = EditorGUILayout.Slider("Fade Amount:", action.spriteFadeAmount, 0, 1);
         action.spriteFadeTime = EditorGUILayout.FloatField("Fade Time:", action.spriteFadeTime);
+    }
+    string[] sceneStates = new string[] {"Scene ID", "Scene Name"};
+    void ChangeScene(Action action) {
+        action.useID = EditorGUILayout.Popup(action.useID, sceneStates);
+        if (action.useID == 0)
+            action.sceneID = EditorGUILayout.IntField("SceneID:", action.sceneID);
+        else
+            action.sceneName = EditorGUILayout.TextField("Scene Name:", action.sceneName);
     }
 }
