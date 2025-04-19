@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 01_Green Cup
   m_EditorClassIdentifier: 
   objectName: 
-  icon: {fileID: 21300000, guid: 10a9edc75b5074f90a764558927aeeda, type: 3}
+  icon: {fileID: 21300000, guid: e4c54a62061f30f418752f4a436553a2, type: 3}
   cursor: {fileID: 2800000, guid: 18cae090d8ced4a9b940fab338d70264, type: 3}
   canCombineWith:
   - {fileID: 11400000, guid: 0f912d5f7082bc1148cf1b180a3abdc1, type: 2}
