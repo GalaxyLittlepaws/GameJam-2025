@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 01_GreenCup_RedCup
   m_EditorClassIdentifier: 
   objectName: 
-  icon: {fileID: 21300000, guid: b2172b70a0d3741d9b222e106ef23c5b, type: 3}
-  cursor: {fileID: 2800000, guid: b0fe27cdd5a6d4d4dbfbce3d69148a4e, type: 3}
+  icon: {fileID: 21300000, guid: 28da67ae517496a4d80b6c217d7278da, type: 3}
+  cursor: {fileID: 2800000, guid: d891ddc5542f546f1832d02b9158b19f, type: 3}
   canCombineWith:
   - {fileID: 11400000, guid: 0f912d5f7082bc1148cf1b180a3abdc1, type: 2}
   - {fileID: 11400000, guid: 739121b4888274c3888993d0be41a4b3, type: 2}
