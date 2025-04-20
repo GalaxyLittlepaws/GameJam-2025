@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 01_Pencil_String_GreenCup
   m_EditorClassIdentifier: 
   objectName: 
-  icon: {fileID: 21300000, guid: 9a2757df90aab4dbbaaf52b77be912bf, type: 3}
-  cursor: {fileID: 2800000, guid: ffc7630b7e761427585cbb4c50c3552a, type: 3}
+  icon: {fileID: 21300000, guid: 1ddbcb9970e0307438fdbe9fc351227c, type: 3}
+  cursor: {fileID: 2800000, guid: b3c6d62ed57074a2d96aa0282e74cae7, type: 3}
   canCombineWith:
   - {fileID: 11400000, guid: edfedd33f328bddcdb709671a0d8dec1, type: 2}
   objectWhenCombined:
