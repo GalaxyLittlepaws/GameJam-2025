@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6261cb43f704e6a4fb2b31b4828fc084
+guid: aafa34a7a76fe7a4d9dbb900c714b497
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7021754725488891032
-    second: Outside cup phone yes outline_0
+      213: 7170924363034191207
+    second: Cup phone_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Outside cup phone yes outline_0
+      name: Cup phone_0
       rect:
         serializedVersion: 2
-        x: 1151
-        y: 146
-        width: 98
-        height: 198
+        x: 0
+        y: 0
+        width: 863
+        height: 863
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8949fa058b8427160800000000000000
-      internalID: 7021754725488891032
+      spriteID: 765e8d907bd348360800000000000000
+      internalID: 7170924363034191207
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Outside cup phone yes outline_0: 7021754725488891032
+      Cup phone_0: 7170924363034191207
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
