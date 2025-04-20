@@ -2,26 +2,33 @@ using UnityEngine;
 
 public class ColorUnlockManager : MonoBehaviour
 {
-    private static readonly int RedProgress = Shader.PropertyToID("_RedProgress");
-    private static readonly int GreenProgress = Shader.PropertyToID("_GreenProgress");
-    private static readonly int BlueProgress = Shader.PropertyToID("_BlueProgress");
-    [SerializeField] private Material colorUnlockMaterial;
-    private float _redProgress;
-    private float _greenProgress;
-    private float _blueProgress;
+    private static readonly int RedEnabled = Shader.PropertyToID("_RedEnabled");
+    private static readonly int GreenEnabled = Shader.PropertyToID("_GreenEnabled");
+    private static readonly int BlueEnabled = Shader.PropertyToID("_BlueEnabled");
+    private static readonly int YellowEnabled = Shader.PropertyToID("_YellowEnabled");
 
-    public void UnlockColor(string color)
+    [SerializeField] private Material colorUnlockMaterial;
+
+    private bool _isRedEnabled;
+    private bool _isGreenEnabled;
+    private bool _isBlueEnabled;
+    private bool _isYellowEnabled;
+
+    public void ToggleColor(string color, bool isEnabled)
     {
         switch (color.ToLower())
         {
             case "red":
-                _redProgress = 1f;
+                _isRedEnabled = isEnabled;
                 break;
             case "green":
-                _greenProgress = 1f;
+                _isGreenEnabled = isEnabled;
                 break;
             case "blue":
-                _blueProgress = 1f;
+                _isBlueEnabled = isEnabled;
+                break;
+            case "yellow":
+                _isYellowEnabled = isEnabled;
                 break;
         }
 
@@ -30,8 +37,9 @@ public class ColorUnlockManager : MonoBehaviour
 
     private void UpdateShader()
     {
-        colorUnlockMaterial.SetFloat(RedProgress, _redProgress);
-        colorUnlockMaterial.SetFloat(GreenProgress, _greenProgress);
-        colorUnlockMaterial.SetFloat(BlueProgress, _blueProgress);
+        colorUnlockMaterial.SetFloat(RedEnabled, _isRedEnabled ? 1f : 0f);
+        colorUnlockMaterial.SetFloat(GreenEnabled, _isGreenEnabled ? 1f : 0f);
+        colorUnlockMaterial.SetFloat(BlueEnabled, _isBlueEnabled ? 1f : 0f);
+        colorUnlockMaterial.SetFloat(YellowEnabled, _isYellowEnabled ? 1f : 0f);
     }
 }
