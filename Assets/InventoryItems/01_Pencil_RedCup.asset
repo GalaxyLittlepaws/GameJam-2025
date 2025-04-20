@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 01_Pencil_RedCup
   m_EditorClassIdentifier: 
   objectName: 
-  icon: {fileID: 21300000, guid: 326d7657700c449b99906811957e3121, type: 3}
-  cursor: {fileID: 2800000, guid: 71ca356ab8cce45afa7e060acac75d1b, type: 3}
+  icon: {fileID: 21300000, guid: d7978ebb0fd301442bb5628b297de14b, type: 3}
+  cursor: {fileID: 2800000, guid: af68e87cf060144a6bef3e3d80e731e2, type: 3}
   canCombineWith:
   - {fileID: 11400000, guid: 1f5dd564696a956ec98ccad9d023d980, type: 2}
   - {fileID: 11400000, guid: 5e0827d3fc0d7462e92138f7880858e6, type: 2}
