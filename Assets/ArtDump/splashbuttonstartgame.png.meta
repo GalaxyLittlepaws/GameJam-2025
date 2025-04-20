@@ -116,10 +116,10 @@ TextureImporter:
       name: splashbuttonstartgame_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 617
-        width: 576
-        height: 264
+        x: 9
+        y: 636
+        width: 597
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
