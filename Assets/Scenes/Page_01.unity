@@ -322,7 +322,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -622,7 +622,7 @@ SpriteRenderer:
   m_Size: {x: 27.366682, y: 18.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &385893858
@@ -2321,6 +2321,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2057756444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2057756446}
+  - component: {fileID: 2057756445}
+  m_Layer: 0
+  m_Name: ColorUnlockManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2057756445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057756444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa61d90e9be4e791da35ebe3a47c3ccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorUnlockMaterial: {fileID: 2100000, guid: a951d630eb2c3c4ca82c5bdc70b81c3b, type: 2}
+--- !u!4 &2057756446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057756444}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.90708995, y: -0.4536503, z: -3.9541779}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2115301223
 GameObject:
   m_ObjectHideFlags: 0
@@ -2331,6 +2376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2115301225}
   - component: {fileID: 2115301224}
+  - component: {fileID: 2115301226}
   m_Layer: 0
   m_Name: True Room
   m_TagString: Untagged
@@ -2381,7 +2427,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -99
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 929cb934b4d362c4692c68f1719ff280, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2411,51 +2457,20 @@ Transform:
   - {fileID: 2055183990}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2057756444
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2057756446}
-  - component: {fileID: 2057756445}
-  m_Layer: 0
-  m_Name: ColorUnlockManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2057756445
+--- !u!114 &2115301226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057756444}
+  m_GameObject: {fileID: 2115301223}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa61d90e9be4e791da35ebe3a47c3ccc, type: 3}
+  m_Script: {fileID: 11500000, guid: 06c0317e0632e6c47bb855ee99f95544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorUnlockMaterial: {fileID: 0}
---- !u!4 &2057756446
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057756444}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.90708995, y: -0.4536503, z: -3.9541779}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  firstTimeCreated: 0
+  renderPipelineAsset: {fileID: 11400000, guid: 681886c5eb7344803b6206f758bf0b1c, type: 2}
 --- !u!1 &2142918295
 GameObject:
   m_ObjectHideFlags: 0
