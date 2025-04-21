@@ -1899,14 +1899,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2057756444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cec86d8c30b741b49f8b7101d88efa6, type: 3}
+  m_Script: {fileID: 11500000, guid: fa61d90e9be4e791da35ebe3a47c3ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorUnlockMaterial: {fileID: 0}
-  _isRedEnabled: 0
-  _isGreenEnabled: 0
-  _isBlueEnabled: 0
-  _isYellowEnabled: 0
+  colorUnlockMaterial: {fileID: 2100000, guid: a951d630eb2c3c4ca82c5bdc70b81c3b, type: 2}
 --- !u!4 &2057756446
 Transform:
   m_ObjectHideFlags: 0
