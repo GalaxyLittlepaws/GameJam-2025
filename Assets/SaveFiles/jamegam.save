@@ -1,8 +1,8 @@
 {
-    "SFXVolume": 0.0,
+    "SFXVolume": 5.0,
     "MusicVolume": 5.0,
-    "font": 2,
-    "currentColor": 1,
+    "font": 0,
+    "currentColor": 0,
     "fullscreen": true,
     "startup": false,
     "customColour1": "blank",
