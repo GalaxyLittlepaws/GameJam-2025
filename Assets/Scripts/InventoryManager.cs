@@ -46,6 +46,7 @@ public class InventoryManager : MonoBehaviour {
                     i++;
                 }
                 Deselct();
+                return;
             }
             currentlySelected = item;
             FindAnyObjectByType<GameManager>().currentCursor = inventoryObjects[item].cursor;
