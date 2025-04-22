@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -177,3 +178,4 @@ public class ActionListEditor : Editor {
             action.sceneName = EditorGUILayout.TextField("Scene Name:", action.sceneName);
     }
 }
+#endif

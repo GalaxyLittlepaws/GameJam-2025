@@ -9,7 +9,7 @@ public class InventoryManager : MonoBehaviour {
     [SerializeField] private int currentlySelected = -1;
     [SerializeField] List<Image>invUIElements;
     void Start() {
-        DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(this);
     }
     void Update() {
         for (int i = 0; i < invUIElements.Count; i++) {
