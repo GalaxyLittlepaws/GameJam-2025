@@ -326,6 +326,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4851210607246801027, guid: c6d41cd974b8c4a4aa5ac1253e2ba648, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851210607246801027, guid: c6d41cd974b8c4a4aa5ac1253e2ba648, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851210607246801027, guid: c6d41cd974b8c4a4aa5ac1253e2ba648, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4964796560773755430, guid: c6d41cd974b8c4a4aa5ac1253e2ba648, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -463,6 +475,8 @@ MonoBehaviour:
   interactionEnabled: 1
   cursor: {fileID: 2800000, guid: aca07eb6ee7484c50991d631e04e0b94, type: 3}
   currentCursor: {fileID: 2800000, guid: aca07eb6ee7484c50991d631e04e0b94, type: 3}
+  bearPuzzleDone: 0
+  cupPuzzleDone: 0
 --- !u!1 &1863378188
 GameObject:
   m_ObjectHideFlags: 0

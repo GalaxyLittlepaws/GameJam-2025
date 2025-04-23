@@ -66,4 +66,10 @@ public class Action {
     //playsound
     public AudioManager audioManager;
 
+    //check finish
+    public ActionList listToPlay;
+
+    //unlock colour
+    public int colourToUnlock;
+
 }

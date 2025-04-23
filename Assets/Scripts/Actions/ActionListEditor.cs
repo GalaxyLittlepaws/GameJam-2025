@@ -7,7 +7,8 @@ using UnityEngine;
 public class ActionListEditor : Editor {
     ActionList baseElement;
     string[] actionNameList = new string[] {"Wait", "Visibility", "Transform", "Set Active", "Set Hotspot", "Interactable State", "Animate", "End Game",
-    "Add Inventory Object", "Remove Inventory Object", "Check Current Inventory Object", "Fade Camera", "Fade Sprite", "Change Scene", "Play Sound"};
+    "Add Inventory Object", "Remove Inventory Object", "Check Current Inventory Object", "Fade Camera", "Fade Sprite", "Change Scene", "Play Sound",
+     "Finish Bear", "Check Finale", "Enable Colour"};
     public override void OnInspectorGUI() {
         base.OnInspectorGUI();
         baseElement = (ActionList)target;
@@ -54,6 +55,12 @@ public class ActionListEditor : Editor {
                     ChangeScene(actionListElement);
                 } else if (actionListElement.index == 14) {
                     PlayAudio(actionListElement);
+                } else if (actionListElement.index == 15) {
+                    EditorGUILayout.LabelField("Will set to true");
+                } else if (actionListElement.index == 16) {
+                    CheckFinish(actionListElement);
+                } else if (actionListElement.index == 17) {
+                    EnableColour(actionListElement);
                 }
                 EditorGUILayout.Space(10);
                 EndAction(i);
@@ -181,6 +188,13 @@ public class ActionListEditor : Editor {
     }
     void PlayAudio(Action action) {
         action.audioManager = (AudioManager)EditorGUILayout.ObjectField("Audio To Play:", action.audioManager, typeof(AudioManager), true);
+    }
+    void CheckFinish(Action action){
+        action.listToPlay = (ActionList)EditorGUILayout.ObjectField("List to play:", action.listToPlay, typeof(ActionList), true);
+    }
+    string[] colourString = new string[] {"Red", "Yellow", "Blue", "Green"};
+    void EnableColour(Action action) {
+        action.colourToUnlock = EditorGUILayout.Popup(action.colourToUnlock, colourString);
     }
 }
 #endif

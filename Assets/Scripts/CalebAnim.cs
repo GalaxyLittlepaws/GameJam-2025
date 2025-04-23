@@ -3,15 +3,20 @@ using UnityEngine;
 public class CalebAnim : MonoBehaviour {
     [SerializeField] InventoryManager inventoryManager;
     [SerializeField] InventoryObject bear;
+    [SerializeField] Animator invAnim;
+    [SerializeField] AudioManager audioMan;
 
     public void OpenInv() {
-        inventoryManager.GetComponent<Animator>().SetTrigger("Open");
+        invAnim.GetComponent<Animator>().SetTrigger("Open");
+        audioMan.Play();
     }
     public void CloseInv() {
-        inventoryManager.GetComponent<Animator>().SetTrigger("Close");
+        invAnim.GetComponent<Animator>().SetTrigger("Close");
+        audioMan.Play();
     }
     public void GrabBear() {
         inventoryManager.RemoveItem(bear);
+        FindAnyObjectByType<GameManager>().bearPuzzleDone = true;
     }
 
 }

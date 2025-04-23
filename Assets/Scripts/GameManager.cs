@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
     public bool interactionEnabled = true;
     public Texture2D cursor;
     public Texture2D currentCursor;
+    public bool bearPuzzleDone = false;
+    public bool cupPuzzleDone = false;
     void Awake() {
         DontDestroyOnLoad(this);
     }
