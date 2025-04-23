@@ -38,4 +38,38 @@ public class Action {
     //comment
     public string comment;
 
+    //add inventory
+    public InventoryObject addInvObj;
+
+    //remove inventory
+    public InventoryObject remInvObj;
+
+    //check inventory
+    public InventoryObject checkInvObj;
+    public ActionList checkSkipTo;
+    public int checkSkipTrue;
+
+    //fade camera
+    public float camFadeTime;
+    public float camFadeAmount;
+
+    //fade camera
+    public float spriteFadeTime;
+    public float spriteFadeAmount;
+    public SpriteRenderer spriteFade;
+
+    //change scene
+    public int useID;
+    public int sceneID;
+    public string sceneName;
+
+    //playsound
+    public AudioManager audioManager;
+
+    //check finish
+    public ActionList listToPlay;
+
+    //unlock colour
+    public int colourToUnlock;
+
 }

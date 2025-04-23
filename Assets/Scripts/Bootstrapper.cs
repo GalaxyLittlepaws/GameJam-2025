@@ -13,7 +13,7 @@ public class Bootstrapper : MonoBehaviour
         } else {
             SceneManager.LoadScene(sceneToGoTo);
         }
-        #elif UNITY_STANDALONE
+        #else
         SceneManager.LoadScene(sceneToGoTo);
         #endif
     }

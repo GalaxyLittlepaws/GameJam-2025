@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a0f2a1deadc4feeb952a5bd17eca1a, type: 3}
+  m_Name: 01_Green Cup
+  m_EditorClassIdentifier: 
+  objectName: 
+  icon: {fileID: 21300000, guid: e4c54a62061f30f418752f4a436553a2, type: 3}
+  cursor: {fileID: 2800000, guid: 97805617fc8d9441f92f908a9b867da1, type: 3}
+  canCombineWith:
+  - {fileID: 11400000, guid: 0f912d5f7082bc1148cf1b180a3abdc1, type: 2}
+  - {fileID: 11400000, guid: c72a212086e9140578fa65de1099d11f, type: 2}
+  - {fileID: 11400000, guid: 739121b4888274c3888993d0be41a4b3, type: 2}
+  - {fileID: 11400000, guid: 2a6314003994d496a82ec7c59deb4957, type: 2}
+  - {fileID: 11400000, guid: edfedd33f328bddcdb709671a0d8dec1, type: 2}
+  - {fileID: 11400000, guid: 8120a453ad3934780bb3a0f0d08e4be1, type: 2}
+  - {fileID: 11400000, guid: 9bc3d35b18d7fab86a3e2e5ff92077f0, type: 2}
+  objectWhenCombined:
+  - {fileID: 11400000, guid: 6a7f1c7781ed74876bea386d3f2e304d, type: 2}
+  - {fileID: 11400000, guid: 337b8a00717f3428db8fdd9011b4a6d1, type: 2}
+  - {fileID: 11400000, guid: 11adc9c07a8474c4e949257be5f0b01e, type: 2}
+  - {fileID: 11400000, guid: f2d88231e50c2193aa33410dc886248b, type: 2}
+  - {fileID: 11400000, guid: c776039e97f8446daa8edb409723ad31, type: 2}
+  - {fileID: 11400000, guid: d2086fe1aba3f4a068e035d254364017, type: 2}
+  - {fileID: 11400000, guid: 5e0827d3fc0d7462e92138f7880858e6, type: 2}
+  toggleBlue: 00000001000000

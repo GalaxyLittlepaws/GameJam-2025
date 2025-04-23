@@ -1,13 +1,18 @@
+#if UNITY_EDITOR
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 [CustomEditor(typeof(ActionList))]
 public class ActionListEditor : Editor {
     ActionList baseElement;
-    string[] actionNameList = new string[] {"Wait", "Visibility", "Transform", "Set Active", "Set Hotspot", "Interactable State", "Animate", "End Game"};
+    string[] actionNameList = new string[] {"Wait", "Visibility", "Transform", "Set Active", "Set Hotspot", "Interactable State", "Animate", "End Game",
+    "Add Inventory Object", "Remove Inventory Object", "Check Current Inventory Object", "Fade Camera", "Fade Sprite", "Change Scene", "Play Sound",
+     "Finish Bear", "Check Finale", "Enable Colour"};
     public override void OnInspectorGUI() {
         base.OnInspectorGUI();
         baseElement = (ActionList)target;
+        baseElement.runOnStart = EditorGUILayout.Toggle("Run on start?", baseElement.runOnStart);
         if (Application.isPlaying) {
             if (GUILayout.Button("Run Actions")) {
                 baseElement.RunActionlist();
@@ -36,6 +41,26 @@ public class ActionListEditor : Editor {
                     Animate(actionListElement);
                 } else if (actionListElement.index == 7) {
                     EndGame();
+                } else if (actionListElement.index == 8) {
+                    AddInventoryObject(actionListElement);
+                } else if (actionListElement.index == 9) {
+                    RemoveInventoryObject(actionListElement);
+                } else if (actionListElement.index == 10) {
+                    CheckCurrentInventoryObject(actionListElement);
+                } else if (actionListElement.index == 11) {
+                    FadeCamera(actionListElement);
+                } else if (actionListElement.index == 12) {
+                    FadeSprite(actionListElement);
+                } else if (actionListElement.index == 13) {
+                    ChangeScene(actionListElement);
+                } else if (actionListElement.index == 14) {
+                    PlayAudio(actionListElement);
+                } else if (actionListElement.index == 15) {
+                    EditorGUILayout.LabelField("Will set to true");
+                } else if (actionListElement.index == 16) {
+                    CheckFinish(actionListElement);
+                } else if (actionListElement.index == 17) {
+                    EnableColour(actionListElement);
                 }
                 EditorGUILayout.Space(10);
                 EndAction(i);
@@ -44,6 +69,8 @@ public class ActionListEditor : Editor {
         if (GUILayout.Button("Add New Action")) {
             baseElement.actionList.Add(new Action());
         }
+        if (!Application.isPlaying)
+            EditorSceneManager.MarkAllScenesDirty();
 
     }
     void EndAction(int i) {
@@ -129,4 +156,45 @@ public class ActionListEditor : Editor {
         action.hotInteract = (Interactable)EditorGUILayout.ObjectField("Hotspot to set:", action.hotInteract, typeof(Interactable), true);
         action.hotState = EditorGUILayout.Toggle("State to set:", action.hotState);
     }
+
+    void AddInventoryObject(Action action) {
+        action.addInvObj = (InventoryObject)EditorGUILayout.ObjectField("Object to add:", action.addInvObj, typeof(InventoryObject), false);
+    }
+    void RemoveInventoryObject(Action action) {
+        action.remInvObj = (InventoryObject)EditorGUILayout.ObjectField("Object to remove:", action.remInvObj, typeof(InventoryObject), false);
+    }
+    string[] invCheckTrue = new string[] {"Run Actionlist if True", "Run Actionlist if False"};
+    void CheckCurrentInventoryObject(Action action) {
+        action.checkInvObj = (InventoryObject)EditorGUILayout.ObjectField("Object to check:", action.checkInvObj, typeof(InventoryObject), false);
+        action.checkSkipTrue = EditorGUILayout.Popup(action.checkSkipTrue, invCheckTrue);
+        action.checkSkipTo = (ActionList)EditorGUILayout.ObjectField("Actionlist to run:", action.checkSkipTo, typeof(ActionList), true);
+    }
+    void FadeCamera(Action action) {
+        action.camFadeAmount = EditorGUILayout.Slider("Fade Amount:", action.camFadeAmount, 0, 1);
+        action.camFadeTime = EditorGUILayout.FloatField("Fade Time:", action.camFadeTime);
+    }
+    void FadeSprite(Action action) {
+        action.spriteFade = (SpriteRenderer)EditorGUILayout.ObjectField("Sprite to fade:", action.spriteFade, typeof(SpriteRenderer), true);
+        action.spriteFadeAmount = EditorGUILayout.Slider("Fade Amount:", action.spriteFadeAmount, 0, 1);
+        action.spriteFadeTime = EditorGUILayout.FloatField("Fade Time:", action.spriteFadeTime);
+    }
+    string[] sceneStates = new string[] {"Scene ID", "Scene Name"};
+    void ChangeScene(Action action) {
+        action.useID = EditorGUILayout.Popup(action.useID, sceneStates);
+        if (action.useID == 0)
+            action.sceneID = EditorGUILayout.IntField("SceneID:", action.sceneID);
+        else
+            action.sceneName = EditorGUILayout.TextField("Scene Name:", action.sceneName);
+    }
+    void PlayAudio(Action action) {
+        action.audioManager = (AudioManager)EditorGUILayout.ObjectField("Audio To Play:", action.audioManager, typeof(AudioManager), true);
+    }
+    void CheckFinish(Action action){
+        action.listToPlay = (ActionList)EditorGUILayout.ObjectField("List to play:", action.listToPlay, typeof(ActionList), true);
+    }
+    string[] colourString = new string[] {"Red", "Yellow", "Blue", "Green"};
+    void EnableColour(Action action) {
+        action.colourToUnlock = EditorGUILayout.Popup(action.colourToUnlock, colourString);
+    }
 }
+#endif

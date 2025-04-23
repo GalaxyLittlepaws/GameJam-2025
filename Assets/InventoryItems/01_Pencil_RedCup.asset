@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a0f2a1deadc4feeb952a5bd17eca1a, type: 3}
+  m_Name: 01_Pencil_RedCup
+  m_EditorClassIdentifier: 
+  objectName: 
+  icon: {fileID: 21300000, guid: d7978ebb0fd301442bb5628b297de14b, type: 3}
+  cursor: {fileID: 2800000, guid: af68e87cf060144a6bef3e3d80e731e2, type: 3}
+  canCombineWith:
+  - {fileID: 11400000, guid: 1f5dd564696a956ec98ccad9d023d980, type: 2}
+  - {fileID: 11400000, guid: 5e0827d3fc0d7462e92138f7880858e6, type: 2}
+  - {fileID: 11400000, guid: 9bc3d35b18d7fab86a3e2e5ff92077f0, type: 2}
+  objectWhenCombined:
+  - {fileID: 11400000, guid: 337b8a00717f3428db8fdd9011b4a6d1, type: 2}
+  - {fileID: 11400000, guid: f2d88231e50c2193aa33410dc886248b, type: 2}
+  - {fileID: 11400000, guid: 2a6314003994d496a82ec7c59deb4957, type: 2}
+  toggleBlue: 000100

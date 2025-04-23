@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbfe840e-3557-41b1-8825-8756dbaeab5a" name="Changes" comment="Fixes layout" />
+    <list default="true" id="cbfe840e-3557-41b1-8825-8756dbaeab5a" name="Changes" comment="🚧 Shader now works via script to toggle colors" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,13 +13,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Inventory-and-First-Scene" />
+        <entry key="$PROJECT_DIR$" value="scene-01-clickable" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///home/user/GitHub/GalaxyLittlepaws/Capricious-Alien-Tactics/Assets/Scripts/InventoryManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColorUnlockManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -37,6 +37,7 @@
     &quot;com.github.patou.gitmoji.display-icon&quot;: &quot;emoji&quot;,
     &quot;com.github.patou.gitmoji.text-after-unicode&quot;: &quot; &quot;,
     &quot;com.github.patou.gitmoji.use-unicode&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;scene-01-clickable&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -53,6 +54,9 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
@@ -61,6 +65,9 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -74,6 +81,7 @@
       <option name="selectedOptions">
         <list />
       </option>
+      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -87,6 +95,7 @@
       <option name="selectedOptions">
         <list />
       </option>
+      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
   </component>
@@ -104,6 +113,13 @@
       <workItem from="1743632110931" duration="1231000" />
       <workItem from="1743697316634" duration="1822000" />
       <workItem from="1743702171118" duration="398000" />
+      <workItem from="1743702585804" duration="116000" />
+      <workItem from="1743716862099" duration="45000" />
+      <workItem from="1743721759963" duration="1225000" />
+      <workItem from="1744827650051" duration="4682000" />
+      <workItem from="1744837022318" duration="7616000" />
+      <workItem from="1744918667503" duration="4167000" />
+      <workItem from="1745174296765" duration="3668000" />
     </task>
     <task id="LOCAL-00001" summary="✨ Fleshes out Inventory a bit more, adds a starter scene with rough content layout">
       <option name="closed" value="true" />
@@ -121,7 +137,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743702344532</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixes layout (forgot to save)">
+      <option name="closed" value="true" />
+      <created>1743702656704</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743702656704</updated>
+    </task>
+    <task id="LOCAL-00004" summary="🚧 Shader now works via script to toggle colors">
+      <option name="closed" value="true" />
+      <created>1745179283278</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745179283278</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,7 +171,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="scene-01-clickable" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -148,6 +192,26 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="✨ Fleshes out Inventory a bit more, adds a starter scene with rough content layout" />
     <MESSAGE value="Fixes layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes layout" />
+    <MESSAGE value="Fixes layout (forgot to save)" />
+    <MESSAGE value=" Shader now works via script to toggle colors" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Shader now works via script to toggle colors" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

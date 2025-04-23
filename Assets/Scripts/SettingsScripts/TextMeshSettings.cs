@@ -23,63 +23,42 @@ public class TextMeshSettings : MonoBehaviour {
             TeMPro = GetComponent<TextMeshPro>();
             defaultColor = TeMPro.color;
         }
-        manager = FindObjectOfType<AccessibilityManager>();
+        manager = FindAnyObjectByType<AccessibilityManager>();
     }
     void Update() {
-        
+        //font
         if (isUI) {
-            if (TeMProUI == null) {
-                TeMProUI = GetComponent<TextMeshProUGUI>();
-                defaultColor = TeMProUI.color;
-            }
             TeMProUI.font = manager.SetFont();
-            if (!negateColourEffect) {
-                if (manager.currentColour == 0) {
-                TeMProUI.overrideColorTags = false;
+        } else {
+            TeMPro.font = manager.SetFont();
+        }
+        
+        if (negateColourEffect) {
+            return;
+        }
+
+        //colour
+        if (isUI) {
+            if (manager.currentColour == 0) {
+                //this is default
                 if (!useDefaultListedColour) {
-                    TeMProUI.color = manager.colourList[0];
-                } else {
                     TeMProUI.color = defaultColor;
-                }
-            } else if (manager.currentColour == 1) {
-                TeMProUI.overrideColorTags = true;
-                if (!useDefaultListedColour) {
-                    TeMProUI.color = manager.colourList[0];
                 } else {
-                    TeMProUI.color = defaultColor;
+                    TeMProUI.color = manager.colourList[manager.currentColour];
                 }
             } else {
-                TeMProUI.overrideColorTags = true;
-                TeMProUI.color = manager.colourList[manager.currentColour + -1];
+                TeMProUI.color = manager.colourList[manager.currentColour];
             }
-            }
-            
-
         } else {
-            if (TeMPro == null) {
-                TeMPro = GetComponent<TextMeshPro>();
-                defaultColor = TeMPro.color;
-            }
-            TeMPro.font = manager.SetFont();
-            if (!negateColourEffect) {
-                if (manager.currentColour == 0) {
-                    TeMPro.overrideColorTags = false;
-                    if (!useDefaultListedColour) {
-                        TeMPro.color = manager.colourList[0];
-                    } else {
-                        TeMPro.color = defaultColor;
-                    }
-                } else if (manager.currentColour == 1) {
-                    TeMPro.overrideColorTags = true;
-                    if (!useDefaultListedColour) {
-                        TeMPro.color = manager.colourList[0];
-                    } else {
-                        TeMPro.color = defaultColor;
-                    }
+            if (manager.currentColour == 0) {
+                //this is default
+                if (!useDefaultListedColour) {
+                    TeMPro.color = defaultColor;
                 } else {
-                    TeMPro.overrideColorTags = true;
-                    TeMPro.color = manager.colourList[manager.currentColour + -1];
+                    TeMPro.color = manager.colourList[manager.currentColour];
                 }
+            } else {
+                TeMPro.color = manager.colourList[manager.currentColour];
             }
         }
     }
