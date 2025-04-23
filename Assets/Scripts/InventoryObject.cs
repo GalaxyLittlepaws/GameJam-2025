@@ -8,4 +8,5 @@ public class InventoryObject : ScriptableObject {
     public Texture2D cursor;
     public List<InventoryObject> canCombineWith;
     public List<InventoryObject> objectWhenCombined;
+    public List<bool> toggleBlue;
 }

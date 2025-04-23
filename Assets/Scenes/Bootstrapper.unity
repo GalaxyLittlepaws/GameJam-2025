@@ -800,8 +800,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e02a745cbca14f5fa06081e6978830d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToGoTo: SplashScreens
-  setCustomScene: 1
+  sceneToGoTo: TitleScreen
+  setCustomScene: 0
   customScene: TitleScreen
 --- !u!4 &2108030912
 Transform:

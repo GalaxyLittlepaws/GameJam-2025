@@ -3,15 +3,12 @@ using UnityEngine;
 
 public class ShaderManager : MonoBehaviour {
     [SerializeField] List<SpriteRenderer> sprites;
-    public bool red;
-    public bool blue;
-    public bool green;
-    public bool yellow;
-    void Start() {
-        
-    }
+    [SerializeField] Material colorShader;
+    [SerializeField] Material normal;
 
-    void Update() {
-        
+    public void NormalColour() {
+        foreach (SpriteRenderer e in sprites) {
+            e.material = normal;
+        }
     }
 }

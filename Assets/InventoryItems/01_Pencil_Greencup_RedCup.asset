@@ -19,3 +19,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9bc3d35b18d7fab86a3e2e5ff92077f0, type: 2}
   objectWhenCombined:
   - {fileID: 11400000, guid: f2d88231e50c2193aa33410dc886248b, type: 2}
+  toggleBlue: 01

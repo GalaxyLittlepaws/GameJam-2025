@@ -13,7 +13,13 @@ public class ColorUnlockManager : MonoBehaviour
     private bool _isGreenEnabled;
     private bool _isBlueEnabled;
     private bool _isYellowEnabled;
-
+    void Start() {
+        _isRedEnabled = false;
+        _isGreenEnabled = false;
+        _isBlueEnabled = false;
+        _isYellowEnabled = false;
+        UpdateShader();
+    }
     public void ToggleColor(string color, bool isEnabled)
     {
         switch (color.ToLower())
@@ -35,7 +41,6 @@ public class ColorUnlockManager : MonoBehaviour
                 Debug.Log("Yellow");
                 break;
         }
-
         UpdateShader();
     }
 

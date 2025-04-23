@@ -23,3 +23,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 337b8a00717f3428db8fdd9011b4a6d1, type: 2}
   - {fileID: 11400000, guid: f2d88231e50c2193aa33410dc886248b, type: 2}
   - {fileID: 11400000, guid: d2086fe1aba3f4a068e035d254364017, type: 2}
+  toggleBlue: 000100

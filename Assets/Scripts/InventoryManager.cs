@@ -32,6 +32,9 @@ public class InventoryManager : MonoBehaviour {
                 bool runIf = true;
                 foreach(InventoryObject e in inventoryObjects[currentlySelected].canCombineWith) {
                     if (e == inventoryObjects[item] && runIf) {
+                        if (inventoryObjects[currentlySelected].toggleBlue[i] == true) {
+                            FindAnyObjectByType<ColorUnlockManager>().ToggleColor("green", true);
+                        }
                         InventoryObject newObject = inventoryObjects[currentlySelected].objectWhenCombined[i];
                         if (currentlySelected < item) {
                             inventoryObjects.RemoveAt(currentlySelected);
@@ -42,6 +45,7 @@ public class InventoryManager : MonoBehaviour {
                         }
                         AddItem(newObject);
                         runIf = false;
+                        
                     }
                     i++;
                 }

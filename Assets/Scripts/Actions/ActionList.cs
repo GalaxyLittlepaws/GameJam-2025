@@ -172,8 +172,10 @@ public class ActionList : MonoBehaviour {
     }
     void CheckFinish(ActionList listToFinish){
         GameManager manager = FindAnyObjectByType<GameManager>();
-        if (manager.bearPuzzleDone && manager.cupPuzzleDone) 
+        if (manager.bearPuzzleDone && manager.cupPuzzleDone) {
             listToFinish.RunActionlist();
+            //FindAnyObjectByType<ShaderManager>().NormalColour();
+        }
     }
     void EnableColour(int colourEnable) {
         /*
@@ -185,7 +187,6 @@ public class ActionList : MonoBehaviour {
         ColorUnlockManager colorUnlockManager = FindAnyObjectByType<ColorUnlockManager>();
         if (colourEnable == 0) {
             colorUnlockManager.ToggleColor("red", true);
-            
         } else if (colourEnable == 1) {
             colorUnlockManager.ToggleColor("yellow", true);
         } else if (colourEnable == 2) {

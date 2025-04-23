@@ -600,6 +600,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf212b707267f4951a40391c95575f96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &54268699 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1250507738114509165, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
+  m_PrefabInstance: {fileID: 54268694}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &55366402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1980,6 +1985,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6189915091495393036, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
   m_PrefabInstance: {fileID: 610727321}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &610727326 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1250507738114509165, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
+  m_PrefabInstance: {fileID: 610727321}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &714496372
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,7 +2030,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a951d630eb2c3c4ca82c5bdc70b81c3b, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2508,6 +2518,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!212 &839538735 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1250507738114509165, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
+  m_PrefabInstance: {fileID: 839538729}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &841777180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2919,6 +2934,11 @@ MonoBehaviour:
     listToPlay: {fileID: 0}
     colourToUnlock: 0
   runOnStart: 0
+--- !u!212 &841777183 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1250507738114509165, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
+  m_PrefabInstance: {fileID: 841777180}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &857983781
 GameObject:
   m_ObjectHideFlags: 0
@@ -3978,6 +3998,11 @@ MonoBehaviour:
 --- !u!4 &934592440 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6189915091495393036, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
+  m_PrefabInstance: {fileID: 934592437}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &934592441 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1250507738114509165, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
   m_PrefabInstance: {fileID: 934592437}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &977781429
@@ -5518,6 +5543,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6189915091495393036, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
   m_PrefabInstance: {fileID: 1698502496}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1698502501 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1250507738114509165, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
+  m_PrefabInstance: {fileID: 1698502496}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1813981133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5859,6 +5889,11 @@ MonoBehaviour:
 --- !u!4 &1813981137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6189915091495393036, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
+  m_PrefabInstance: {fileID: 1813981133}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1813981138 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1250507738114509165, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
   m_PrefabInstance: {fileID: 1813981133}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1843080041
@@ -6328,6 +6363,11 @@ MonoBehaviour:
 --- !u!4 &1888057335 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6189915091495393036, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
+  m_PrefabInstance: {fileID: 1888057331}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1888057336 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1250507738114509165, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
   m_PrefabInstance: {fileID: 1888057331}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1967124393
@@ -6858,6 +6898,11 @@ MonoBehaviour:
     listToPlay: {fileID: 857983782}
     colourToUnlock: 0
   runOnStart: 0
+--- !u!212 &2038157790 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1250507738114509165, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
+  m_PrefabInstance: {fileID: 85381374}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2055183989
 GameObject:
   m_ObjectHideFlags: 0
@@ -6978,6 +7023,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057756446}
   - component: {fileID: 2057756445}
+  - component: {fileID: 2057756447}
   m_Layer: 0
   m_Name: ColorUnlockManager
   m_TagString: Untagged
@@ -7013,6 +7059,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2057756447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057756444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d063082f253f041efaaf51fefde68518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 2115301224}
+  - {fileID: 2096542066}
+  - {fileID: 2055183991}
+  - {fileID: 2038157790}
+  - {fileID: 2002726059}
+  - {fileID: 1967124395}
+  - {fileID: 1888057336}
+  - {fileID: 1870049204}
+  - {fileID: 1843080043}
+  - {fileID: 1813981138}
+  - {fileID: 1698502501}
+  - {fileID: 1671177316}
+  - {fileID: 1520508136}
+  - {fileID: 1485008615}
+  - {fileID: 1462307169}
+  - {fileID: 1289312205}
+  - {fileID: 1221608214}
+  - {fileID: 1207531952}
+  - {fileID: 1200387367}
+  - {fileID: 934592441}
+  - {fileID: 879321870}
+  - {fileID: 872895394}
+  - {fileID: 841777183}
+  - {fileID: 839538735}
+  - {fileID: 823799597}
+  - {fileID: 714496373}
+  - {fileID: 610727326}
+  - {fileID: 479680991}
+  - {fileID: 263867270}
+  - {fileID: 165004408}
+  - {fileID: 55366404}
+  - {fileID: 54268699}
+  - {fileID: 46888763}
+  colorShader: {fileID: 2100000, guid: a951d630eb2c3c4ca82c5bdc70b81c3b, type: 2}
+  normal: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1001 &2096542063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7384,6 +7478,11 @@ MonoBehaviour:
     listToPlay: {fileID: 0}
     colourToUnlock: 0
   runOnStart: 0
+--- !u!212 &2096542066 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1250507738114509165, guid: 7b4dac0f5c5494f8d85910cf3570bf37, type: 3}
+  m_PrefabInstance: {fileID: 2096542063}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2115301223
 GameObject:
   m_ObjectHideFlags: 0

@@ -100,7 +100,7 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BlueEnabled: 1
-    - _BlueUnlocked: 0
+    - _BlueUnlocked: 1
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
@@ -115,14 +115,15 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0.5
     - _GlossyReflections: 0
-    - _GreenEnabled: 0
+    - _GreenEnabled: 1
     - _GreenUnlocked: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RedUnlocked: 0
+    - _RedEnabled: 1
+    - _RedUnlocked: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -130,8 +131,8 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _WorkflowMode: 1
-    - _YellowEnabled: 0
-    - _YellowUnlocked: 0
+    - _YellowEnabled: 1
+    - _YellowUnlocked: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
