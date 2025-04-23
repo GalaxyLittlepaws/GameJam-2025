@@ -7,7 +7,7 @@ using UnityEngine;
 public class ActionListEditor : Editor {
     ActionList baseElement;
     string[] actionNameList = new string[] {"Wait", "Visibility", "Transform", "Set Active", "Set Hotspot", "Interactable State", "Animate", "End Game",
-    "Add Inventory Object", "Remove Inventory Object", "Check Current Inventory Object", "Fade Camera", "Fade Sprite", "Change Scene"};
+    "Add Inventory Object", "Remove Inventory Object", "Check Current Inventory Object", "Fade Camera", "Fade Sprite", "Change Scene", "Play Sound"};
     public override void OnInspectorGUI() {
         base.OnInspectorGUI();
         baseElement = (ActionList)target;
@@ -52,6 +52,8 @@ public class ActionListEditor : Editor {
                     FadeSprite(actionListElement);
                 } else if (actionListElement.index == 13) {
                     ChangeScene(actionListElement);
+                } else if (actionListElement.index == 14) {
+                    PlayAudio(actionListElement);
                 }
                 EditorGUILayout.Space(10);
                 EndAction(i);
@@ -176,6 +178,9 @@ public class ActionListEditor : Editor {
             action.sceneID = EditorGUILayout.IntField("SceneID:", action.sceneID);
         else
             action.sceneName = EditorGUILayout.TextField("Scene Name:", action.sceneName);
+    }
+    void PlayAudio(Action action) {
+        action.audioManager = (AudioManager)EditorGUILayout.ObjectField("Audio To Play:", action.audioManager, typeof(AudioManager), true);
     }
 }
 #endif

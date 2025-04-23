@@ -63,4 +63,7 @@ public class Action {
     public int sceneID;
     public string sceneName;
 
+    //playsound
+    public AudioManager audioManager;
+
 }

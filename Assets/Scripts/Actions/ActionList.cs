@@ -60,6 +60,8 @@ public class ActionList : MonoBehaviour {
                 FadeSprite(actionList[i].spriteFadeAmount, actionList[i].spriteFadeTime, actionList[i].spriteFade);
             } else if (actionList[i].index == 13) {
                 ChangeScene(actionList[i].useID, actionList[i].sceneID, actionList[i].sceneName);
+            } else if (actionList[i].index == 14) {
+                PlaySound(actionList[i].audioManager);
             }
             if (actionList[i].comment != null && actionList[i].comment != "")
                 Debug.Log(actionList[i].comment);
@@ -156,14 +158,12 @@ public class ActionList : MonoBehaviour {
             SceneManager.LoadScene(sceneName);
         }
     }
+    void PlaySound(AudioManager audioManager) {
+        audioManager.Play();
+    }
     /*
     Actions
-    - Send Message
-    - change camera
-    - save
-    - load
     - play sound
-    - play music
     - check variable
     - set variable
     */
