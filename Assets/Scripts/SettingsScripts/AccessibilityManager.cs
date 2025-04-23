@@ -82,16 +82,8 @@ public class AccessibilityManager : MonoBehaviour, IDataPersitence {
     }
     void Start() {
         
-        #if !PLATFORM_WEBGL && !UNITY_WEBGL
         saveManager = FindAnyObjectByType<DataPersistenceManager>();
-        saveManager.LoadGame();
         SetCustomColours();
-
-        if (fullscreen)
-        TurnOnFullscreen();
-        else
-        TurnOffFullscreen();
-        #endif
     }
 
     void Update() {
