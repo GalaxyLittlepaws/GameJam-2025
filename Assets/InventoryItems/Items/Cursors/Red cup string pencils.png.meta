@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e5a2672bdb67c44b9aaf80adf201be06
+guid: 0c2219fbfd8a348aaa21832459ec290a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6740035376166378402
-    second: Green Cup Pencils_0
+      213: -8576127119048743872
+    second: Red cup string pencils_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 64
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Green Cup Pencils_0
+      name: Red cup string pencils_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e54690e19859672a0800000000000000
-      internalID: -6740035376166378402
+      spriteID: 0446180d2d97bf880800000000000000
+      internalID: -8576127119048743872
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Green Cup Pencils_0: -6740035376166378402
+      Red cup string pencils_0: -8576127119048743872
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4e41824ce0ed543afb65f27ab921065e
+guid: aca07eb6ee7484c50991d631e04e0b94
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3342283536505988516
-    second: Red Cup_0
+      213: -4750761433519615375
+    second: Cursor_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 64
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Red Cup_0
+      name: Cursor_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 863
-        height: 863
+        x: 133
+        y: 12
+        width: 107
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4a563141b2d226e20800000000000000
-      internalID: 3342283536505988516
+      spriteID: 172107695a7e11eb0800000000000000
+      internalID: -4750761433519615375
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Red Cup_0: 3342283536505988516
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
