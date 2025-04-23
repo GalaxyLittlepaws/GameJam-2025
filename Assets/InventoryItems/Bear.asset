@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bear
   m_EditorClassIdentifier: 
   objectName: 
-  icon: {fileID: 0}
-  cursor: {fileID: 0}
+  icon: {fileID: 21300000, guid: 754734636e33b3e4ca8b6479ec7ef3b6, type: 3}
+  cursor: {fileID: 2800000, guid: e1d90c1757d874fa4952e0163bbd749b, type: 3}
   canCombineWith: []
   objectWhenCombined: []

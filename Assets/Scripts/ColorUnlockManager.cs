@@ -20,15 +20,19 @@ public class ColorUnlockManager : MonoBehaviour
         {
             case "red":
                 _isRedEnabled = isEnabled;
+                Debug.Log("Red");
                 break;
             case "green":
                 _isGreenEnabled = isEnabled;
+                Debug.Log("Green");
                 break;
             case "blue":
                 _isBlueEnabled = isEnabled;
+                Debug.Log("Blue");
                 break;
             case "yellow":
                 _isYellowEnabled = isEnabled;
+                Debug.Log("Yellow");
                 break;
         }
 

@@ -62,6 +62,12 @@ public class ActionList : MonoBehaviour {
                 ChangeScene(actionList[i].useID, actionList[i].sceneID, actionList[i].sceneName);
             } else if (actionList[i].index == 14) {
                 PlaySound(actionList[i].audioManager);
+            } else if (actionList[i].index == 15) {
+                FinishCup();
+            } else if (actionList[i].index == 16) {
+                CheckFinish(actionList[i].listToPlay);
+            } else if (actionList[i].index == 17) {
+                EnableColour(actionList[i].colourToUnlock);
             }
             if (actionList[i].comment != null && actionList[i].comment != "")
                 Debug.Log(actionList[i].comment);
@@ -160,6 +166,33 @@ public class ActionList : MonoBehaviour {
     }
     void PlaySound(AudioManager audioManager) {
         audioManager.Play();
+    }
+    void FinishCup() {
+        FindAnyObjectByType<GameManager>().cupPuzzleDone = true;
+    }
+    void CheckFinish(ActionList listToFinish){
+        GameManager manager = FindAnyObjectByType<GameManager>();
+        if (manager.bearPuzzleDone && manager.cupPuzzleDone) 
+            listToFinish.RunActionlist();
+    }
+    void EnableColour(int colourEnable) {
+        /*
+        0 - red
+        1 - yellow
+        2 - blue
+        3 - green
+        */
+        ColorUnlockManager colorUnlockManager = FindAnyObjectByType<ColorUnlockManager>();
+        if (colourEnable == 0) {
+            colorUnlockManager.ToggleColor("red", true);
+            
+        } else if (colourEnable == 1) {
+            colorUnlockManager.ToggleColor("yellow", true);
+        } else if (colourEnable == 2) {
+            colorUnlockManager.ToggleColor("blue", true);
+        } else if (colourEnable == 3) {
+            colorUnlockManager.ToggleColor("green", true);
+        }
     }
     /*
     Actions
